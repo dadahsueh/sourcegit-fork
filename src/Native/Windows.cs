@@ -141,6 +141,14 @@ namespace SourceGit.Native
                         return wtFinder.ToString();
 
                     break;
+                case "tty7":
+                    // The tty7 command line is installed next to the app and put on the user's
+                    // PATH by the app itself, so looking it up by name is the whole job.
+                    var tty7Finder = new StringBuilder("tty7.exe", 512);
+                    if (PathFindOnPath(tty7Finder, null))
+                        return tty7Finder.ToString();
+
+                    break;
             }
 
             return string.Empty;

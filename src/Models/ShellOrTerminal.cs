@@ -33,7 +33,8 @@ namespace SourceGit.Models
                     new ShellOrTerminal("git-bash", "Git Bash", "bash.exe"),
                     new ShellOrTerminal("pwsh", "PowerShell", "pwsh.exe|powershell.exe"),
                     new ShellOrTerminal("cmd", "Command Prompt", "cmd.exe"),
-                    new ShellOrTerminal("wt", "Windows Terminal", "wt.exe", "-d .")
+                    new ShellOrTerminal("wt", "Windows Terminal", "wt.exe", "-d ."),
+                    new ShellOrTerminal("tty7", "tty7", "tty7.exe", ".")
                 };
             }
             else if (OperatingSystem.IsMacOS())
@@ -48,6 +49,9 @@ namespace SourceGit.Models
                     new ShellOrTerminal("otty", "Otty", "Otty"),
                     new ShellOrTerminal("cmux", "cmux", "cmux"),
                     new ShellOrTerminal("mux0", "mux0", "mux0"),
+                    // tty7 takes the directory to open as `--open-path`, and the app bundle is
+                    // what `open -a` finds, so the path is passed through as an argument.
+                    new ShellOrTerminal("tty7", "tty7", "tty7", "--open-path"),
                 };
             }
             else
@@ -65,6 +69,9 @@ namespace SourceGit.Models
                     new ShellOrTerminal("ptyxis", "Ptyxis", "ptyxis", "--new-window --working-directory=."),
                     new ShellOrTerminal("ghostty", "Ghostty", "ghostty"),
                     new ShellOrTerminal("kitty", "kitty", "kitty"),
+                    // The tty7 command line takes the directory to open as a positional argument,
+                    // and it is run with the repository as its working directory, so `.` is the path.
+                    new ShellOrTerminal("tty7", "tty7", "tty7", "."),
                     new ShellOrTerminal("custom", "Custom", ""),
                 };
             }

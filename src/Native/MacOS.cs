@@ -118,11 +118,17 @@ namespace SourceGit.Native
                 Process.Start("open", $"{path.Quoted()} -R");
         }
 
-        public void OpenTerminal(string workdir, string _)
+        public void OpenTerminal(string workdir, string args)
         {
             var home = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
             var dir = string.IsNullOrEmpty(workdir) ? home : workdir;
-            Process.Start("open", $"-a {OS.ShellOrTerminal} {dir.Quoted()}");
+
+            // A terminal that takes its starting directory as an option needs that option to be
+            // passed on, and `open` only forwards arguments to the app after `--args`.
+            if (string.IsNullOrEmpty(args))
+                Process.Start("open", $"-a {OS.ShellOrTerminal} {dir.Quoted()}");
+            else
+                Process.Start("open", $"-a {OS.ShellOrTerminal} --args {args} {dir.Quoted()}");
         }
 
         public void OpenWithDefaultEditor(string file)
