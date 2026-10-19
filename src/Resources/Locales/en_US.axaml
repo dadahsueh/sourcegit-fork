@@ -1024,7 +1024,13 @@
   <x:String x:Key="Text.Welcome.AddSubFolder" xml:space="preserve">Create Sub-Group</x:String>
   <x:String x:Key="Text.Welcome.Clone" xml:space="preserve">Clone Repository</x:String>
   <x:String x:Key="Text.Welcome.Delete" xml:space="preserve">Delete</x:String>
-  <x:String x:Key="Text.Welcome.DragDropTip" xml:space="preserve">DRAG &amp; DROP FOLDER SUPPORTED. CUSTOM GROUPING SUPPORTED.</x:String>
+  <x:String x:Key="Text.Welcome.DragDropTip" xml:space="preserve">Drag and drop folders to add or group repositories.</x:String>
+  <x:String x:Key="Text.Welcome.OpenHint" xml:space="preserve">Open</x:String>
+  <x:String x:Key="Text.Welcome.DeleteHint" xml:space="preserve">Delete</x:String>
+  <x:String x:Key="Text.Welcome.NoRepositories" xml:space="preserve">No repositories yet</x:String>
+  <x:String x:Key="Text.Welcome.NoRepositoriesDesc" xml:space="preserve">Clone a remote repository or open a local folder to get started.</x:String>
+  <x:String x:Key="Text.Welcome.NoMatches" xml:space="preserve">No repositories match your search.</x:String>
+  <x:String x:Key="Text.Welcome.ClearSearch" xml:space="preserve">Clear Search</x:String>
   <x:String x:Key="Text.Welcome.Edit" xml:space="preserve">Edit</x:String>
   <x:String x:Key="Text.Welcome.Move" xml:space="preserve">Move to Another Group</x:String>
   <x:String x:Key="Text.Welcome.OpenAllInNode" xml:space="preserve">Open All Repositories</x:String>
