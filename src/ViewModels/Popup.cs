@@ -29,6 +29,15 @@ namespace SourceGit.ViewModels
             set => SetProperty(ref _progressDescription, value);
         }
 
+        /// <summary>
+        ///     The label of the button that confirms the popup. Popups that require more than one
+        ///     step to be completed may override it to describe the current step.
+        /// </summary>
+        public virtual string SureText
+        {
+            get => App.Text("Sure");
+        }
+
         [UnconditionalSuppressMessage("AssemblyLoadTrimming", "IL2026:RequiresUnreferencedCode")]
         public bool Check()
         {

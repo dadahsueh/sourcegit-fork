@@ -819,8 +819,23 @@
   <x:String x:Key="Text.SaveAs" xml:space="preserve">שמור בשם...</x:String>
   <x:String x:Key="Text.SaveAsPatchSuccess" xml:space="preserve">ה־Patch נשמר בהצלחה!</x:String>
   <x:String x:Key="Text.ScanRepositories" xml:space="preserve">סרוק מאגרים</x:String>
-  <x:String x:Key="Text.ScanRepositories.RootDir" xml:space="preserve">תיקיית שורש:</x:String>
-  <x:String x:Key="Text.ScanRepositories.UseCustomDir" xml:space="preserve">סרוק תיקייה מותאמת אישית אחרת</x:String>
+  <x:String x:Key="Text.ScanRepositories.AddDirectory" xml:space="preserve">הוספת תיקייה</x:String>
+  <x:String x:Key="Text.ScanRepositories.Apply" xml:space="preserve">החלה</x:String>
+  <x:String x:Key="Text.ScanRepositories.ApplyMode" xml:space="preserve">כיצד לעדכן את רשימת המאגרים?</x:String>
+  <x:String x:Key="Text.ScanRepositories.Directories" xml:space="preserve">תיקיות לסריקה</x:String>
+  <x:String x:Key="Text.ScanRepositories.Found" xml:space="preserve">נמצאו</x:String>
+  <x:String x:Key="Text.ScanRepositories.KeepStructure" xml:space="preserve">שמירת המבנה הנוכחי (הקבוצות)</x:String>
+  <x:String x:Key="Text.ScanRepositories.KeepStructure.Tips" xml:space="preserve">ממזג את המאגרים שנסרקו לרשימה הנוכחית ושומר על הקבוצות הקיימות. מאגרים שנמחקו מהדיסק יוסרו.</x:String>
+  <x:String x:Key="Text.ScanRepositories.New" xml:space="preserve">חדשים</x:String>
+  <x:String x:Key="Text.ScanRepositories.NoDirectories" xml:space="preserve">אין תיקייה לסריקה. הוסיפו תיקייה כדי לגלות את המאגרים שבה.</x:String>
+  <x:String x:Key="Text.ScanRepositories.NotExists" xml:space="preserve">התיקייה הזו אינה קיימת</x:String>
+  <x:String x:Key="Text.ScanRepositories.Recursive" xml:space="preserve">סריקת תיקיות המשנה גם כן</x:String>
+  <x:String x:Key="Text.ScanRepositories.Removed" xml:space="preserve">יוסרו</x:String>
+  <x:String x:Key="Text.ScanRepositories.ReplaceStructure" xml:space="preserve">החלפת המבנה הנוכחי</x:String>
+  <x:String x:Key="Text.ScanRepositories.ReplaceStructure.Tips" xml:space="preserve">בניית רשימת המאגרים מחדש מתוצאות הסריקה. מאגרים שאינם נמצאים בתיקיות שנסרקו יוסרו.</x:String>
+  <x:String x:Key="Text.ScanRepositories.Rescan" xml:space="preserve">סריקה חוזרת</x:String>
+  <x:String x:Key="Text.ScanRepositories.Scan" xml:space="preserve">סריקה</x:String>
+  <x:String x:Key="Text.ScanRepositories.Scanning" xml:space="preserve">סורק</x:String>
   <x:String x:Key="Text.SelfUpdate" xml:space="preserve">בדוק עדכונים...</x:String>
   <x:String x:Key="Text.SelfUpdate.Available" xml:space="preserve">גרסה חדשה של התוכנה זמינה: </x:String>
   <x:String x:Key="Text.SelfUpdate.CurrentVersion" xml:space="preserve">גרסה נוכחית: </x:String>
@@ -929,7 +944,7 @@
   <x:String x:Key="Text.Welcome.OpenAllInNode" xml:space="preserve">פתח כל המאגרים</x:String>
   <x:String x:Key="Text.Welcome.OpenOrInit" xml:space="preserve">פתח מאגר</x:String>
   <x:String x:Key="Text.Welcome.OpenTerminal" xml:space="preserve">פתח טרמינל</x:String>
-  <x:String x:Key="Text.Welcome.ScanDefaultCloneDir" xml:space="preserve">סרוק מחדש של מאגרים בתיקיית ה־Clone ברירת מחדל</x:String>
+  <x:String x:Key="Text.Welcome.ScanDefaultCloneDir" xml:space="preserve">סריקת התיקיות המוגדרות כדי לגלות את המאגרים</x:String>
   <x:String x:Key="Text.Welcome.Search" xml:space="preserve">חיפוש מאגרים...</x:String>
   <x:String x:Key="Text.WorkingCopy" xml:space="preserve">שינויים מקומיים</x:String>
   <x:String x:Key="Text.WorkingCopy.AddToGitIgnore" xml:space="preserve">Git Ignore</x:String>

@@ -879,8 +879,23 @@
   <x:String x:Key="Text.SaveAs" xml:space="preserve">名前を付けて保存...</x:String>
   <x:String x:Key="Text.SaveAsPatchSuccess" xml:space="preserve">パッチが正常に保存されました！</x:String>
   <x:String x:Key="Text.ScanRepositories" xml:space="preserve">リポジトリをスキャン</x:String>
-  <x:String x:Key="Text.ScanRepositories.RootDir" xml:space="preserve">ルートディレクトリ:</x:String>
-  <x:String x:Key="Text.ScanRepositories.UseCustomDir" xml:space="preserve">任意の別ディレクトリをスキャン</x:String>
+  <x:String x:Key="Text.ScanRepositories.AddDirectory" xml:space="preserve">ディレクトリを追加</x:String>
+  <x:String x:Key="Text.ScanRepositories.Apply" xml:space="preserve">適用</x:String>
+  <x:String x:Key="Text.ScanRepositories.ApplyMode" xml:space="preserve">リポジトリ一覧を更新する方法を指定してください。</x:String>
+  <x:String x:Key="Text.ScanRepositories.Directories" xml:space="preserve">スキャンするディレクトリ</x:String>
+  <x:String x:Key="Text.ScanRepositories.Found" xml:space="preserve">検出</x:String>
+  <x:String x:Key="Text.ScanRepositories.KeepStructure" xml:space="preserve">現在の構成（グループ）を保持する</x:String>
+  <x:String x:Key="Text.ScanRepositories.KeepStructure.Tips" xml:space="preserve">スキャンしたリポジトリを現在のリストに統合し、既存のグループを維持します。ディスクから削除されたリポジトリは削除されます。</x:String>
+  <x:String x:Key="Text.ScanRepositories.New" xml:space="preserve">新規</x:String>
+  <x:String x:Key="Text.ScanRepositories.NoDirectories" xml:space="preserve">スキャンするディレクトリがありません。追加すると、その中のリポジトリが検出されます。</x:String>
+  <x:String x:Key="Text.ScanRepositories.NotExists" xml:space="preserve">このディレクトリは存在しません</x:String>
+  <x:String x:Key="Text.ScanRepositories.Recursive" xml:space="preserve">サブディレクトリもスキャンする</x:String>
+  <x:String x:Key="Text.ScanRepositories.Removed" xml:space="preserve">削除</x:String>
+  <x:String x:Key="Text.ScanRepositories.ReplaceStructure" xml:space="preserve">現在の構成を置き換える</x:String>
+  <x:String x:Key="Text.ScanRepositories.ReplaceStructure.Tips" xml:space="preserve">スキャン結果からリポジトリ一覧を再構築します。スキャン対象ディレクトリに含まれないリポジトリは削除されます。</x:String>
+  <x:String x:Key="Text.ScanRepositories.Rescan" xml:space="preserve">再スキャン</x:String>
+  <x:String x:Key="Text.ScanRepositories.Scan" xml:space="preserve">スキャン</x:String>
+  <x:String x:Key="Text.ScanRepositories.Scanning" xml:space="preserve">スキャン中</x:String>
   <x:String x:Key="Text.SelfUpdate" xml:space="preserve">更新を確認...</x:String>
   <x:String x:Key="Text.SelfUpdate.Available" xml:space="preserve">このソフトウェアの新しいバージョンが利用できます: </x:String>
   <x:String x:Key="Text.SelfUpdate.CurrentVersion" xml:space="preserve">現在のバージョン: </x:String>
@@ -1014,7 +1029,7 @@
   <x:String x:Key="Text.Welcome.OpenAllInNode" xml:space="preserve">すべてのリポジトリを開く</x:String>
   <x:String x:Key="Text.Welcome.OpenOrInit" xml:space="preserve">リポジトリを開く</x:String>
   <x:String x:Key="Text.Welcome.OpenTerminal" xml:space="preserve">端末を開く</x:String>
-  <x:String x:Key="Text.Welcome.ScanDefaultCloneDir" xml:space="preserve">既定のクローンディレクトリ内のリポジトリを再スキャン</x:String>
+  <x:String x:Key="Text.Welcome.ScanDefaultCloneDir" xml:space="preserve">設定したディレクトリをスキャンしてリポジトリを検出します</x:String>
   <x:String x:Key="Text.Welcome.Search" xml:space="preserve">リポジトリを検索...</x:String>
   <x:String x:Key="Text.WorkingCopy" xml:space="preserve">ローカルの変更</x:String>
   <x:String x:Key="Text.WorkingCopy.AddToGitIgnore" xml:space="preserve">無視</x:String>

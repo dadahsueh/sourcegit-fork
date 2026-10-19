@@ -889,8 +889,23 @@
   <x:String x:Key="Text.SaveAs" xml:space="preserve">Guardar Como...</x:String>
   <x:String x:Key="Text.SaveAsPatchSuccess" xml:space="preserve">¡El parche se ha guardado exitosamente!</x:String>
   <x:String x:Key="Text.ScanRepositories" xml:space="preserve">Escanear Repositorios</x:String>
-  <x:String x:Key="Text.ScanRepositories.RootDir" xml:space="preserve">Directorio Raíz:</x:String>
-  <x:String x:Key="Text.ScanRepositories.UseCustomDir" xml:space="preserve">Escanear otro directorio personalizado</x:String>
+  <x:String x:Key="Text.ScanRepositories.AddDirectory" xml:space="preserve">Añadir directorio</x:String>
+  <x:String x:Key="Text.ScanRepositories.Apply" xml:space="preserve">Aplicar</x:String>
+  <x:String x:Key="Text.ScanRepositories.ApplyMode" xml:space="preserve">¿Cómo debe actualizarse la lista de repositorios?</x:String>
+  <x:String x:Key="Text.ScanRepositories.Directories" xml:space="preserve">Directorios a escanear</x:String>
+  <x:String x:Key="Text.ScanRepositories.Found" xml:space="preserve">Encontrados</x:String>
+  <x:String x:Key="Text.ScanRepositories.KeepStructure" xml:space="preserve">Mantener la estructura actual (agrupación)</x:String>
+  <x:String x:Key="Text.ScanRepositories.KeepStructure.Tips" xml:space="preserve">Combina los repositorios escaneados con la lista actual y conserva los grupos existentes. Los repositorios que se han eliminado del disco se quitan.</x:String>
+  <x:String x:Key="Text.ScanRepositories.New" xml:space="preserve">Nuevos</x:String>
+  <x:String x:Key="Text.ScanRepositories.NoDirectories" xml:space="preserve">No hay ningún directorio que escanear. Añade uno para descubrir los repositorios que contiene.</x:String>
+  <x:String x:Key="Text.ScanRepositories.NotExists" xml:space="preserve">Este directorio no existe</x:String>
+  <x:String x:Key="Text.ScanRepositories.Recursive" xml:space="preserve">Escanear también los subdirectorios</x:String>
+  <x:String x:Key="Text.ScanRepositories.Removed" xml:space="preserve">Eliminados</x:String>
+  <x:String x:Key="Text.ScanRepositories.ReplaceStructure" xml:space="preserve">Reemplazar la estructura actual</x:String>
+  <x:String x:Key="Text.ScanRepositories.ReplaceStructure.Tips" xml:space="preserve">Reconstruye la lista de repositorios con el resultado del escaneo. Los repositorios que no están en los directorios escaneados se quitan.</x:String>
+  <x:String x:Key="Text.ScanRepositories.Rescan" xml:space="preserve">Volver a escanear</x:String>
+  <x:String x:Key="Text.ScanRepositories.Scan" xml:space="preserve">Escanear</x:String>
+  <x:String x:Key="Text.ScanRepositories.Scanning" xml:space="preserve">Escaneando</x:String>
   <x:String x:Key="Text.SelfUpdate" xml:space="preserve">Buscar Actualizaciones...</x:String>
   <x:String x:Key="Text.SelfUpdate.Available" xml:space="preserve">Nueva versión de este software disponible: </x:String>
   <x:String x:Key="Text.SelfUpdate.CurrentVersion" xml:space="preserve">Versión Actual: </x:String>
@@ -1034,7 +1049,7 @@
   <x:String x:Key="Text.Welcome.OpenAllInNode" xml:space="preserve">Abrir Todos Los Repositorios</x:String>
   <x:String x:Key="Text.Welcome.OpenOrInit" xml:space="preserve">Abrir Repositorio</x:String>
   <x:String x:Key="Text.Welcome.OpenTerminal" xml:space="preserve">Abrir Terminal</x:String>
-  <x:String x:Key="Text.Welcome.ScanDefaultCloneDir" xml:space="preserve">Reescanear Repositorios en el Directorio de Clonado por Defecto</x:String>
+  <x:String x:Key="Text.Welcome.ScanDefaultCloneDir" xml:space="preserve">Escanear los directorios configurados para descubrir los repositorios</x:String>
   <x:String x:Key="Text.Welcome.Search" xml:space="preserve">Buscar Repositorios...</x:String>
   <x:String x:Key="Text.WorkingCopy" xml:space="preserve">Cambios</x:String>
   <x:String x:Key="Text.WorkingCopy.AddToGitIgnore" xml:space="preserve">Git Ignore</x:String>

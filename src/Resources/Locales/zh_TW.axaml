@@ -889,8 +889,23 @@
   <x:String x:Key="Text.SaveAs" xml:space="preserve">另存新檔...</x:String>
   <x:String x:Key="Text.SaveAsPatchSuccess" xml:space="preserve">修補檔已成功儲存!</x:String>
   <x:String x:Key="Text.ScanRepositories" xml:space="preserve">掃描存放庫</x:String>
-  <x:String x:Key="Text.ScanRepositories.RootDir" xml:space="preserve">頂層目錄:</x:String>
-  <x:String x:Key="Text.ScanRepositories.UseCustomDir" xml:space="preserve">掃描其他自訂目錄</x:String>
+  <x:String x:Key="Text.ScanRepositories.AddDirectory" xml:space="preserve">新增目錄</x:String>
+  <x:String x:Key="Text.ScanRepositories.Apply" xml:space="preserve">套用</x:String>
+  <x:String x:Key="Text.ScanRepositories.ApplyMode" xml:space="preserve">如何更新存放庫清單？</x:String>
+  <x:String x:Key="Text.ScanRepositories.Directories" xml:space="preserve">要掃描的目錄</x:String>
+  <x:String x:Key="Text.ScanRepositories.Found" xml:space="preserve">找到</x:String>
+  <x:String x:Key="Text.ScanRepositories.KeepStructure" xml:space="preserve">保留目前結構（分組）</x:String>
+  <x:String x:Key="Text.ScanRepositories.KeepStructure.Tips" xml:space="preserve">將掃描到的存放庫合併到目前清單中，並保留現有的分組。已從磁碟刪除的存放庫會被移除。</x:String>
+  <x:String x:Key="Text.ScanRepositories.New" xml:space="preserve">新增</x:String>
+  <x:String x:Key="Text.ScanRepositories.NoDirectories" xml:space="preserve">沒有可掃描的目錄。新增一個目錄以探索其中的存放庫。</x:String>
+  <x:String x:Key="Text.ScanRepositories.NotExists" xml:space="preserve">該目錄不存在</x:String>
+  <x:String x:Key="Text.ScanRepositories.Recursive" xml:space="preserve">同時掃描子目錄</x:String>
+  <x:String x:Key="Text.ScanRepositories.Removed" xml:space="preserve">移除</x:String>
+  <x:String x:Key="Text.ScanRepositories.ReplaceStructure" xml:space="preserve">取代目前結構</x:String>
+  <x:String x:Key="Text.ScanRepositories.ReplaceStructure.Tips" xml:space="preserve">依掃描結果重新建立存放庫清單。不在掃描目錄中的存放庫會被移除。</x:String>
+  <x:String x:Key="Text.ScanRepositories.Rescan" xml:space="preserve">重新掃描</x:String>
+  <x:String x:Key="Text.ScanRepositories.Scan" xml:space="preserve">掃描</x:String>
+  <x:String x:Key="Text.ScanRepositories.Scanning" xml:space="preserve">正在掃描</x:String>
   <x:String x:Key="Text.SelfUpdate" xml:space="preserve">檢查更新...</x:String>
   <x:String x:Key="Text.SelfUpdate.Available" xml:space="preserve">軟體有版本更新:</x:String>
   <x:String x:Key="Text.SelfUpdate.CurrentVersion" xml:space="preserve">目前版本: </x:String>
@@ -1034,7 +1049,7 @@
   <x:String x:Key="Text.Welcome.OpenAllInNode" xml:space="preserve">開啟所有存放庫</x:String>
   <x:String x:Key="Text.Welcome.OpenOrInit" xml:space="preserve">開啟本機存放庫</x:String>
   <x:String x:Key="Text.Welcome.OpenTerminal" xml:space="preserve">開啟終端機</x:String>
-  <x:String x:Key="Text.Welcome.ScanDefaultCloneDir" xml:space="preserve">重新掃描預設複製 (clone) 目錄下的存放庫</x:String>
+  <x:String x:Key="Text.Welcome.ScanDefaultCloneDir" xml:space="preserve">掃描已設定的目錄以探索其中的存放庫</x:String>
   <x:String x:Key="Text.Welcome.Search" xml:space="preserve">篩選存放庫...</x:String>
   <x:String x:Key="Text.WorkingCopy" xml:space="preserve">本機變更</x:String>
   <x:String x:Key="Text.WorkingCopy.AddToGitIgnore" xml:space="preserve">加入至 .gitignore 忽略清單</x:String>

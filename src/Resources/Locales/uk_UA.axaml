@@ -555,7 +555,23 @@
   <x:String x:Key="Text.SaveAs" xml:space="preserve">Зберегти як...</x:String>
   <x:String x:Key="Text.SaveAsPatchSuccess" xml:space="preserve">Патч успішно збережено!</x:String>
   <x:String x:Key="Text.ScanRepositories" xml:space="preserve">Сканувати сховища</x:String>
-  <x:String x:Key="Text.ScanRepositories.RootDir" xml:space="preserve">Коренева тека:</x:String>
+  <x:String x:Key="Text.ScanRepositories.AddDirectory" xml:space="preserve">Додати теку</x:String>
+  <x:String x:Key="Text.ScanRepositories.Apply" xml:space="preserve">Застосувати</x:String>
+  <x:String x:Key="Text.ScanRepositories.ApplyMode" xml:space="preserve">Як оновити список сховищ?</x:String>
+  <x:String x:Key="Text.ScanRepositories.Directories" xml:space="preserve">Теки для сканування</x:String>
+  <x:String x:Key="Text.ScanRepositories.Found" xml:space="preserve">Знайдено</x:String>
+  <x:String x:Key="Text.ScanRepositories.KeepStructure" xml:space="preserve">Зберегти поточну структуру (групування)</x:String>
+  <x:String x:Key="Text.ScanRepositories.KeepStructure.Tips" xml:space="preserve">Об'єднати знайдені сховища з поточним списком і зберегти наявні групи. Сховища, видалені з диска, буде вилучено.</x:String>
+  <x:String x:Key="Text.ScanRepositories.New" xml:space="preserve">Нові</x:String>
+  <x:String x:Key="Text.ScanRepositories.NoDirectories" xml:space="preserve">Немає тек для сканування. Додайте теку, щоб знайти сховища в ній.</x:String>
+  <x:String x:Key="Text.ScanRepositories.NotExists" xml:space="preserve">Ця тека не існує</x:String>
+  <x:String x:Key="Text.ScanRepositories.Recursive" xml:space="preserve">Сканувати також вкладені теки</x:String>
+  <x:String x:Key="Text.ScanRepositories.Removed" xml:space="preserve">Вилучено</x:String>
+  <x:String x:Key="Text.ScanRepositories.ReplaceStructure" xml:space="preserve">Замінити поточну структуру</x:String>
+  <x:String x:Key="Text.ScanRepositories.ReplaceStructure.Tips" xml:space="preserve">Список сховищ буде перебудовано за результатами сканування. Сховища, які не розташовані в каталогах, що скануються, буде вилучено.</x:String>
+  <x:String x:Key="Text.ScanRepositories.Rescan" xml:space="preserve">Сканувати ще раз</x:String>
+  <x:String x:Key="Text.ScanRepositories.Scan" xml:space="preserve">Сканувати</x:String>
+  <x:String x:Key="Text.ScanRepositories.Scanning" xml:space="preserve">Сканування</x:String>
   <x:String x:Key="Text.SelfUpdate" xml:space="preserve">Перевірити оновлення...</x:String>
   <x:String x:Key="Text.SelfUpdate.Available" xml:space="preserve">Доступна нова версія програми: </x:String>
   <x:String x:Key="Text.SelfUpdate.Error" xml:space="preserve">Не вдалося перевірити оновлення!</x:String>
@@ -621,7 +637,7 @@
   <x:String x:Key="Text.Welcome.OpenAllInNode" xml:space="preserve">Відкрити всі сховища</x:String>
   <x:String x:Key="Text.Welcome.OpenOrInit" xml:space="preserve">Відкрити сховище</x:String>
   <x:String x:Key="Text.Welcome.OpenTerminal" xml:space="preserve">Відкрити термінал</x:String>
-  <x:String x:Key="Text.Welcome.ScanDefaultCloneDir" xml:space="preserve">Пересканувати сховища у теці клонування за замовчуванням</x:String>
+  <x:String x:Key="Text.Welcome.ScanDefaultCloneDir" xml:space="preserve">Сканувати налаштовані теки, щоб знайти сховища</x:String>
   <x:String x:Key="Text.Welcome.Search" xml:space="preserve">Пошук сховищ...</x:String>
   <x:String x:Key="Text.WorkingCopy" xml:space="preserve">ЛОКАЛЬНІ ЗМІНИ</x:String>
   <x:String x:Key="Text.WorkingCopy.AddToGitIgnore" xml:space="preserve">Git Ignore</x:String>

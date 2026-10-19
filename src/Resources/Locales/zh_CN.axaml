@@ -889,8 +889,23 @@
   <x:String x:Key="Text.SaveAs" xml:space="preserve">另存为...</x:String>
   <x:String x:Key="Text.SaveAsPatchSuccess" xml:space="preserve">补丁已成功保存！</x:String>
   <x:String x:Key="Text.ScanRepositories" xml:space="preserve">扫描仓库</x:String>
-  <x:String x:Key="Text.ScanRepositories.RootDir" xml:space="preserve">根路径 ：</x:String>
-  <x:String x:Key="Text.ScanRepositories.UseCustomDir" xml:space="preserve">扫描其他自定义路径</x:String>
+  <x:String x:Key="Text.ScanRepositories.AddDirectory" xml:space="preserve">添加目录</x:String>
+  <x:String x:Key="Text.ScanRepositories.Apply" xml:space="preserve">应用</x:String>
+  <x:String x:Key="Text.ScanRepositories.ApplyMode" xml:space="preserve">如何更新仓库列表？</x:String>
+  <x:String x:Key="Text.ScanRepositories.Directories" xml:space="preserve">要扫描的目录</x:String>
+  <x:String x:Key="Text.ScanRepositories.Found" xml:space="preserve">找到</x:String>
+  <x:String x:Key="Text.ScanRepositories.KeepStructure" xml:space="preserve">保留当前结构（分组）</x:String>
+  <x:String x:Key="Text.ScanRepositories.KeepStructure.Tips" xml:space="preserve">将扫描到的仓库合并到当前列表中，并保留现有的分组。已从磁盘删除的仓库会被移除。</x:String>
+  <x:String x:Key="Text.ScanRepositories.New" xml:space="preserve">新增</x:String>
+  <x:String x:Key="Text.ScanRepositories.NoDirectories" xml:space="preserve">没有可扫描的目录。添加一个目录以发现其中的仓库。</x:String>
+  <x:String x:Key="Text.ScanRepositories.NotExists" xml:space="preserve">该目录不存在</x:String>
+  <x:String x:Key="Text.ScanRepositories.Recursive" xml:space="preserve">同时扫描子目录</x:String>
+  <x:String x:Key="Text.ScanRepositories.Removed" xml:space="preserve">移除</x:String>
+  <x:String x:Key="Text.ScanRepositories.ReplaceStructure" xml:space="preserve">替换当前结构</x:String>
+  <x:String x:Key="Text.ScanRepositories.ReplaceStructure.Tips" xml:space="preserve">根据扫描结果重新构建仓库列表。不在扫描目录中的仓库会被移除。</x:String>
+  <x:String x:Key="Text.ScanRepositories.Rescan" xml:space="preserve">重新扫描</x:String>
+  <x:String x:Key="Text.ScanRepositories.Scan" xml:space="preserve">扫描</x:String>
+  <x:String x:Key="Text.ScanRepositories.Scanning" xml:space="preserve">正在扫描</x:String>
   <x:String x:Key="Text.SelfUpdate" xml:space="preserve">检测更新...</x:String>
   <x:String x:Key="Text.SelfUpdate.Available" xml:space="preserve">检测到软件有版本更新: </x:String>
   <x:String x:Key="Text.SelfUpdate.CurrentVersion" xml:space="preserve">当前版本 ：</x:String>
@@ -1034,7 +1049,7 @@
   <x:String x:Key="Text.Welcome.OpenAllInNode" xml:space="preserve">打开所有包含仓库</x:String>
   <x:String x:Key="Text.Welcome.OpenOrInit" xml:space="preserve">打开本地仓库</x:String>
   <x:String x:Key="Text.Welcome.OpenTerminal" xml:space="preserve">打开终端</x:String>
-  <x:String x:Key="Text.Welcome.ScanDefaultCloneDir" xml:space="preserve">重新扫描默认克隆路径下的仓库</x:String>
+  <x:String x:Key="Text.Welcome.ScanDefaultCloneDir" xml:space="preserve">扫描已配置的目录以发现其中的仓库</x:String>
   <x:String x:Key="Text.Welcome.Search" xml:space="preserve">快速查找仓库...</x:String>
   <x:String x:Key="Text.WorkingCopy" xml:space="preserve">本地更改</x:String>
   <x:String x:Key="Text.WorkingCopy.AddToGitIgnore" xml:space="preserve">添加至 .gitignore 忽略列表</x:String>

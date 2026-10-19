@@ -542,7 +542,23 @@
   <x:String x:Key="Text.SaveAs" xml:space="preserve">Salvar Como...</x:String>
   <x:String x:Key="Text.SaveAsPatchSuccess" xml:space="preserve">Patch salvo com sucesso!</x:String>
   <x:String x:Key="Text.ScanRepositories" xml:space="preserve">Escanear Repositórios</x:String>
-  <x:String x:Key="Text.ScanRepositories.RootDir" xml:space="preserve">Diretório Raiz:</x:String>
+  <x:String x:Key="Text.ScanRepositories.AddDirectory" xml:space="preserve">Adicionar diretório</x:String>
+  <x:String x:Key="Text.ScanRepositories.Apply" xml:space="preserve">Aplicar</x:String>
+  <x:String x:Key="Text.ScanRepositories.ApplyMode" xml:space="preserve">Como a lista de repositórios deve ser atualizada?</x:String>
+  <x:String x:Key="Text.ScanRepositories.Directories" xml:space="preserve">Diretórios a escanear</x:String>
+  <x:String x:Key="Text.ScanRepositories.Found" xml:space="preserve">Encontrados</x:String>
+  <x:String x:Key="Text.ScanRepositories.KeepStructure" xml:space="preserve">Manter a estrutura atual (agrupamento)</x:String>
+  <x:String x:Key="Text.ScanRepositories.KeepStructure.Tips" xml:space="preserve">Mescla os repositórios escaneados à lista atual e mantém os grupos existentes. Os repositórios excluídos do disco são removidos.</x:String>
+  <x:String x:Key="Text.ScanRepositories.New" xml:space="preserve">Novos</x:String>
+  <x:String x:Key="Text.ScanRepositories.NoDirectories" xml:space="preserve">Nenhum diretório para escanear. Adicione um para descobrir os repositórios dentro dele.</x:String>
+  <x:String x:Key="Text.ScanRepositories.NotExists" xml:space="preserve">Este diretório não existe</x:String>
+  <x:String x:Key="Text.ScanRepositories.Recursive" xml:space="preserve">Escanear também os subdiretórios</x:String>
+  <x:String x:Key="Text.ScanRepositories.Removed" xml:space="preserve">Removidos</x:String>
+  <x:String x:Key="Text.ScanRepositories.ReplaceStructure" xml:space="preserve">Substituir a estrutura atual</x:String>
+  <x:String x:Key="Text.ScanRepositories.ReplaceStructure.Tips" xml:space="preserve">Recria a lista de repositórios a partir do resultado da varredura. Os repositórios que não estão nos diretórios escaneados são removidos.</x:String>
+  <x:String x:Key="Text.ScanRepositories.Rescan" xml:space="preserve">Escanear novamente</x:String>
+  <x:String x:Key="Text.ScanRepositories.Scan" xml:space="preserve">Escanear</x:String>
+  <x:String x:Key="Text.ScanRepositories.Scanning" xml:space="preserve">Escaneando</x:String>
   <x:String x:Key="Text.SelfUpdate" xml:space="preserve">Verificar atualizações...</x:String>
   <x:String x:Key="Text.SelfUpdate.Available" xml:space="preserve">Nova versão deste software disponível: </x:String>
   <x:String x:Key="Text.SelfUpdate.Error" xml:space="preserve">Falha ao verificar atualizações!</x:String>
@@ -602,7 +618,7 @@
   <x:String x:Key="Text.Welcome.OpenAllInNode" xml:space="preserve">Abrir Todos os Repositórios</x:String>
   <x:String x:Key="Text.Welcome.OpenOrInit" xml:space="preserve">Abrir Repositório</x:String>
   <x:String x:Key="Text.Welcome.OpenTerminal" xml:space="preserve">Abrir Terminal</x:String>
-  <x:String x:Key="Text.Welcome.ScanDefaultCloneDir" xml:space="preserve">Reescanear Repositórios no Diretório de Clone Padrão</x:String>
+  <x:String x:Key="Text.Welcome.ScanDefaultCloneDir" xml:space="preserve">Escanear os diretórios configurados para descobrir os repositórios</x:String>
   <x:String x:Key="Text.Welcome.Search" xml:space="preserve">Buscar Repositórios...</x:String>
   <x:String x:Key="Text.WorkingCopy" xml:space="preserve">Alterações</x:String>
   <x:String x:Key="Text.WorkingCopy.AddToGitIgnore" xml:space="preserve">Git Ignore</x:String>

@@ -819,8 +819,23 @@
   <x:String x:Key="Text.SaveAs" xml:space="preserve">Sauvegarder en tant que...</x:String>
   <x:String x:Key="Text.SaveAsPatchSuccess" xml:space="preserve">Le patch a été sauvegardé !</x:String>
   <x:String x:Key="Text.ScanRepositories" xml:space="preserve">Analyser les repositories</x:String>
-  <x:String x:Key="Text.ScanRepositories.RootDir" xml:space="preserve">Dossier racine :</x:String>
-  <x:String x:Key="Text.ScanRepositories.UseCustomDir" xml:space="preserve">Scanner un autre répertoire personnalisé</x:String>
+  <x:String x:Key="Text.ScanRepositories.AddDirectory" xml:space="preserve">Ajouter un dossier</x:String>
+  <x:String x:Key="Text.ScanRepositories.Apply" xml:space="preserve">Appliquer</x:String>
+  <x:String x:Key="Text.ScanRepositories.ApplyMode" xml:space="preserve">Comment la liste des dépôts doit-elle être mise à jour ?</x:String>
+  <x:String x:Key="Text.ScanRepositories.Directories" xml:space="preserve">Dossiers à analyser</x:String>
+  <x:String x:Key="Text.ScanRepositories.Found" xml:space="preserve">Trouvés</x:String>
+  <x:String x:Key="Text.ScanRepositories.KeepStructure" xml:space="preserve">Conserver la structure actuelle (groupement)</x:String>
+  <x:String x:Key="Text.ScanRepositories.KeepStructure.Tips" xml:space="preserve">Fusionne les dépôts analysés avec la liste actuelle et conserve les groupes existants. Les dépôts supprimés du disque sont retirés.</x:String>
+  <x:String x:Key="Text.ScanRepositories.New" xml:space="preserve">Nouveaux</x:String>
+  <x:String x:Key="Text.ScanRepositories.NoDirectories" xml:space="preserve">Aucun dossier à analyser. Ajoutez-en un pour découvrir les dépôts qu'il contient.</x:String>
+  <x:String x:Key="Text.ScanRepositories.NotExists" xml:space="preserve">Ce dossier n'existe pas</x:String>
+  <x:String x:Key="Text.ScanRepositories.Recursive" xml:space="preserve">Analyser également les sous-dossiers</x:String>
+  <x:String x:Key="Text.ScanRepositories.Removed" xml:space="preserve">Retirés</x:String>
+  <x:String x:Key="Text.ScanRepositories.ReplaceStructure" xml:space="preserve">Remplacer la structure actuelle</x:String>
+  <x:String x:Key="Text.ScanRepositories.ReplaceStructure.Tips" xml:space="preserve">Reconstruit la liste des dépôts à partir du résultat de l'analyse. Les dépôts qui ne se trouvent pas dans les dossiers analysés sont retirés.</x:String>
+  <x:String x:Key="Text.ScanRepositories.Rescan" xml:space="preserve">Réanalyser</x:String>
+  <x:String x:Key="Text.ScanRepositories.Scan" xml:space="preserve">Analyser</x:String>
+  <x:String x:Key="Text.ScanRepositories.Scanning" xml:space="preserve">Analyse en cours</x:String>
   <x:String x:Key="Text.SelfUpdate" xml:space="preserve">Rechercher des mises à jour...</x:String>
   <x:String x:Key="Text.SelfUpdate.Available" xml:space="preserve">Une nouvelle version du logiciel est disponible :</x:String>
   <x:String x:Key="Text.SelfUpdate.CurrentVersion" xml:space="preserve">Version actuelle : </x:String>
@@ -929,7 +944,7 @@
   <x:String x:Key="Text.Welcome.OpenAllInNode" xml:space="preserve">Ouvrir tous les dépôts</x:String>
   <x:String x:Key="Text.Welcome.OpenOrInit" xml:space="preserve">Ouvrir un dépôt</x:String>
   <x:String x:Key="Text.Welcome.OpenTerminal" xml:space="preserve">Ouvrir le terminal</x:String>
-  <x:String x:Key="Text.Welcome.ScanDefaultCloneDir" xml:space="preserve">Réanalyser les repositories dans le dossier de clonage par défaut</x:String>
+  <x:String x:Key="Text.Welcome.ScanDefaultCloneDir" xml:space="preserve">Analyser les dossiers configurés pour découvrir les dépôts</x:String>
   <x:String x:Key="Text.Welcome.Search" xml:space="preserve">Chercher des dépôts...</x:String>
   <x:String x:Key="Text.WorkingCopy" xml:space="preserve">Changements</x:String>
   <x:String x:Key="Text.WorkingCopy.AddToGitIgnore" xml:space="preserve">Git Ignore</x:String>

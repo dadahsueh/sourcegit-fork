@@ -116,7 +116,7 @@
                                 Padding="0"
                                 HorizontalContentAlignment="Center"
                                 VerticalContentAlignment="Center"
-                                Content="{DynamicResource Text.Sure}"
+                                Content="{Binding SureText}"
                                 Click="OnPopupSure"
                                 ToolTip.Tip="Enter"/>
                         <Button Classes="flat"

@@ -889,8 +889,23 @@
   <x:String x:Key="Text.SaveAs" xml:space="preserve">Сохранить как...</x:String>
   <x:String x:Key="Text.SaveAsPatchSuccess" xml:space="preserve">Заплатка успешно сохранена!</x:String>
   <x:String x:Key="Text.ScanRepositories" xml:space="preserve">Обнаружение репозиториев</x:String>
-  <x:String x:Key="Text.ScanRepositories.RootDir" xml:space="preserve">Корневой каталог:</x:String>
-  <x:String x:Key="Text.ScanRepositories.UseCustomDir" xml:space="preserve">Сканировать другой пользовательский каталог</x:String>
+  <x:String x:Key="Text.ScanRepositories.AddDirectory" xml:space="preserve">Добавить каталог</x:String>
+  <x:String x:Key="Text.ScanRepositories.Apply" xml:space="preserve">Применить</x:String>
+  <x:String x:Key="Text.ScanRepositories.ApplyMode" xml:space="preserve">Как обновить список репозиториев?</x:String>
+  <x:String x:Key="Text.ScanRepositories.Directories" xml:space="preserve">Каталоги для сканирования</x:String>
+  <x:String x:Key="Text.ScanRepositories.Found" xml:space="preserve">Найдено</x:String>
+  <x:String x:Key="Text.ScanRepositories.KeepStructure" xml:space="preserve">Сохранить текущую структуру (группировку)</x:String>
+  <x:String x:Key="Text.ScanRepositories.KeepStructure.Tips" xml:space="preserve">Объединить найденные репозитории с текущим списком и сохранить существующие группы. Репозитории, удалённые с диска, будут удалены из списка.</x:String>
+  <x:String x:Key="Text.ScanRepositories.New" xml:space="preserve">Новые</x:String>
+  <x:String x:Key="Text.ScanRepositories.NoDirectories" xml:space="preserve">Нет каталогов для сканирования. Добавьте каталог, чтобы найти содержащиеся в нём репозитории.</x:String>
+  <x:String x:Key="Text.ScanRepositories.NotExists" xml:space="preserve">Этот каталог не существует</x:String>
+  <x:String x:Key="Text.ScanRepositories.Recursive" xml:space="preserve">Сканировать и вложенные каталоги</x:String>
+  <x:String x:Key="Text.ScanRepositories.Removed" xml:space="preserve">Удалено</x:String>
+  <x:String x:Key="Text.ScanRepositories.ReplaceStructure" xml:space="preserve">Заменить текущую структуру</x:String>
+  <x:String x:Key="Text.ScanRepositories.ReplaceStructure.Tips" xml:space="preserve">Список репозиториев будет перестроен по результатам сканирования. Репозитории, не находящиеся в сканируемых каталогах, будут удалены.</x:String>
+  <x:String x:Key="Text.ScanRepositories.Rescan" xml:space="preserve">Сканировать снова</x:String>
+  <x:String x:Key="Text.ScanRepositories.Scan" xml:space="preserve">Сканировать</x:String>
+  <x:String x:Key="Text.ScanRepositories.Scanning" xml:space="preserve">Сканирование</x:String>
   <x:String x:Key="Text.SelfUpdate" xml:space="preserve">Проверить обновления...</x:String>
   <x:String x:Key="Text.SelfUpdate.Available" xml:space="preserve">Доступна новая версия программного обеспечения: </x:String>
   <x:String x:Key="Text.SelfUpdate.CurrentVersion" xml:space="preserve">Текущая версия: </x:String>
@@ -1034,7 +1049,7 @@
   <x:String x:Key="Text.Welcome.OpenAllInNode" xml:space="preserve">Открыть все репозитории</x:String>
   <x:String x:Key="Text.Welcome.OpenOrInit" xml:space="preserve">Открыть репозиторий</x:String>
   <x:String x:Key="Text.Welcome.OpenTerminal" xml:space="preserve">Открыть терминал</x:String>
-  <x:String x:Key="Text.Welcome.ScanDefaultCloneDir" xml:space="preserve">Обнаружить репозитории в каталоге клонирования по умолчанию</x:String>
+  <x:String x:Key="Text.Welcome.ScanDefaultCloneDir" xml:space="preserve">Сканировать настроенные каталоги, чтобы найти репозитории</x:String>
   <x:String x:Key="Text.Welcome.Search" xml:space="preserve">Найти репозиторий...</x:String>
   <x:String x:Key="Text.WorkingCopy" xml:space="preserve">Изменения</x:String>
   <x:String x:Key="Text.WorkingCopy.AddToGitIgnore" xml:space="preserve">Игнорировать Git</x:String>

@@ -860,8 +860,23 @@
   <x:String x:Key="Text.SaveAs" xml:space="preserve">Simpan Sebagai...</x:String>
   <x:String x:Key="Text.SaveAsPatchSuccess" xml:space="preserve">Patch berhasil disimpan!</x:String>
   <x:String x:Key="Text.ScanRepositories" xml:space="preserve">Pindai Repositori</x:String>
-  <x:String x:Key="Text.ScanRepositories.RootDir" xml:space="preserve">Direktori Root:</x:String>
-  <x:String x:Key="Text.ScanRepositories.UseCustomDir" xml:space="preserve">Pindai direktori kustom lain</x:String>
+  <x:String x:Key="Text.ScanRepositories.AddDirectory" xml:space="preserve">Tambah Direktori</x:String>
+  <x:String x:Key="Text.ScanRepositories.Apply" xml:space="preserve">Terapkan</x:String>
+  <x:String x:Key="Text.ScanRepositories.ApplyMode" xml:space="preserve">Bagaimana daftar repositori harus diperbarui?</x:String>
+  <x:String x:Key="Text.ScanRepositories.Directories" xml:space="preserve">Direktori yang akan dipindai</x:String>
+  <x:String x:Key="Text.ScanRepositories.Found" xml:space="preserve">Ditemukan</x:String>
+  <x:String x:Key="Text.ScanRepositories.KeepStructure" xml:space="preserve">Pertahankan struktur saat ini (pengelompokan)</x:String>
+  <x:String x:Key="Text.ScanRepositories.KeepStructure.Tips" xml:space="preserve">Gabungkan repositori yang dipindai ke daftar saat ini dan pertahankan grup yang ada. Repositori yang telah dihapus dari disk akan dihapus.</x:String>
+  <x:String x:Key="Text.ScanRepositories.New" xml:space="preserve">Baru</x:String>
+  <x:String x:Key="Text.ScanRepositories.NoDirectories" xml:space="preserve">Tidak ada direktori untuk dipindai. Tambahkan salah satu untuk menemukan repositori di dalamnya.</x:String>
+  <x:String x:Key="Text.ScanRepositories.NotExists" xml:space="preserve">Direktori ini tidak ada</x:String>
+  <x:String x:Key="Text.ScanRepositories.Recursive" xml:space="preserve">Pindai subdirektori juga</x:String>
+  <x:String x:Key="Text.ScanRepositories.Removed" xml:space="preserve">Dihapus</x:String>
+  <x:String x:Key="Text.ScanRepositories.ReplaceStructure" xml:space="preserve">Ganti struktur saat ini</x:String>
+  <x:String x:Key="Text.ScanRepositories.ReplaceStructure.Tips" xml:space="preserve">Bangun ulang daftar repositori dari hasil pemindaian. Repositori yang tidak berada di direktori yang dipindai akan dihapus.</x:String>
+  <x:String x:Key="Text.ScanRepositories.Rescan" xml:space="preserve">Pindai ulang</x:String>
+  <x:String x:Key="Text.ScanRepositories.Scan" xml:space="preserve">Pindai</x:String>
+  <x:String x:Key="Text.ScanRepositories.Scanning" xml:space="preserve">Memindai</x:String>
   <x:String x:Key="Text.SelfUpdate" xml:space="preserve">Periksa Pembaruan...</x:String>
   <x:String x:Key="Text.SelfUpdate.Available" xml:space="preserve">Versi baru dari perangkat lunak ini tersedia: </x:String>
   <x:String x:Key="Text.SelfUpdate.CurrentVersion" xml:space="preserve">Versi Saat Ini: </x:String>
@@ -973,7 +988,7 @@
   <x:String x:Key="Text.Welcome.OpenAllInNode" xml:space="preserve">Buka Semua Repositori</x:String>
   <x:String x:Key="Text.Welcome.OpenOrInit" xml:space="preserve">Buka Repositori</x:String>
   <x:String x:Key="Text.Welcome.OpenTerminal" xml:space="preserve">Buka Terminal</x:String>
-  <x:String x:Key="Text.Welcome.ScanDefaultCloneDir" xml:space="preserve">Pindai Ulang Repositori di Direktori Clone Default</x:String>
+  <x:String x:Key="Text.Welcome.ScanDefaultCloneDir" xml:space="preserve">Pindai direktori yang dikonfigurasi untuk menemukan repositori</x:String>
   <x:String x:Key="Text.Welcome.Search" xml:space="preserve">Cari Repositori...</x:String>
   <x:String x:Key="Text.WorkingCopy" xml:space="preserve">PERUBAHAN LOKAL</x:String>
   <x:String x:Key="Text.WorkingCopy.AddToGitIgnore" xml:space="preserve">Git Ignore</x:String>

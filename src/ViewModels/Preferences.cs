@@ -26,6 +26,7 @@ namespace SourceGit.ViewModels
                 _instance.PrepareShellOrTerminal();
                 _instance.PrepareExternalDiffMergeTool();
                 _instance.PrepareWorkspaces();
+                _instance.PrepareScanDirs();
 
                 return _instance;
             }
@@ -325,6 +326,15 @@ namespace SourceGit.ViewModels
             get => _gitDefaultCloneDir;
             set => SetProperty(ref _gitDefaultCloneDir, value);
         }
+
+        /// <summary>
+        ///     The directories that are scanned to discover the managed repositories.
+        /// </summary>
+        public List<Models.ScanDir> RepositoryScanDirs
+        {
+            get;
+            set;
+        } = [];
 
         public bool UseLibsecretInsteadOfGCM
         {
@@ -647,7 +657,11 @@ namespace SourceGit.ViewModels
         {
             var path = Path.Combine(Native.OS.BasicDirectories.ConfigDir, "preference.json");
             if (!File.Exists(path))
-                return new Preferences();
+            {
+                var instance = new Preferences();
+                instance._isNewInstall = true;
+                return instance;
+            }
 
             try
             {
@@ -712,6 +726,26 @@ namespace SourceGit.ViewModels
                     workspace.ActiveIdx = 0;
                 }
             }
+        }
+
+        /// <summary>
+        ///     Seeds the directories to scan on the very first launch, so that the scan can be
+        ///     triggered with a single click right away.
+        /// </summary>
+        private void PrepareScanDirs()
+        {
+            if (RepositoryScanDirs == null)
+                RepositoryScanDirs = new List<Models.ScanDir>();
+
+            if (!_isNewInstall || RepositoryScanDirs.Count > 0)
+                return;
+
+            var workspace = GetActiveWorkspace();
+            if (!string.IsNullOrEmpty(workspace.DefaultCloneDir))
+                RepositoryScanDirs.Add(new Models.ScanDir() { Path = workspace.DefaultCloneDir });
+
+            if (!string.IsNullOrEmpty(GitDefaultCloneDir))
+                RepositoryScanDirs.Add(new Models.ScanDir() { Path = GitDefaultCloneDir });
         }
 
         private RepositoryNode FindNodeRecursive(string id, List<RepositoryNode> collection)
@@ -807,6 +841,7 @@ namespace SourceGit.ViewModels
 
         private bool _isLoading = true;
         private bool _isReadonly = true;
+        private bool _isNewInstall = false;
         private string _locale = "en_US";
         private string _theme = "Default";
         private string _themeOverrides = string.Empty;

@@ -551,7 +551,23 @@
   <x:String x:Key="Text.SaveAs" xml:space="preserve">எனச் சேமி...</x:String>
   <x:String x:Key="Text.SaveAsPatchSuccess" xml:space="preserve">ஒட்டு வெற்றிகரமாக சேமிக்கப்பட்டது!</x:String>
   <x:String x:Key="Text.ScanRepositories" xml:space="preserve">களஞ்சியங்களை வருடு</x:String>
-  <x:String x:Key="Text.ScanRepositories.RootDir" xml:space="preserve">வேர் அடைவு:</x:String>
+  <x:String x:Key="Text.ScanRepositories.AddDirectory" xml:space="preserve">அடைவைச் சேர்</x:String>
+  <x:String x:Key="Text.ScanRepositories.Apply" xml:space="preserve">பயன்படுத்து</x:String>
+  <x:String x:Key="Text.ScanRepositories.ApplyMode" xml:space="preserve">களஞ்சியப் பட்டியலை எவ்வாறு புதுப்பிப்பது?</x:String>
+  <x:String x:Key="Text.ScanRepositories.Directories" xml:space="preserve">வருடப்பட வேண்டிய அடைவுகள்</x:String>
+  <x:String x:Key="Text.ScanRepositories.Found" xml:space="preserve">கண்டறியப்பட்டவை</x:String>
+  <x:String x:Key="Text.ScanRepositories.KeepStructure" xml:space="preserve">தற்போதைய அமைப்பை (குழு) தக்கவைத்துக்கொள்</x:String>
+  <x:String x:Key="Text.ScanRepositories.KeepStructure.Tips" xml:space="preserve">வருடப்பட்ட களஞ்சியங்களை தற்போதைய பட்டியலுடன் இணைத்து, உள்ள குழுக்களைத் தக்கவைத்துக்கொள்கிறது. வட்டிலிருந்து நீக்கப்பட்ட களஞ்சியங்கள் அகற்றப்படும்.</x:String>
+  <x:String x:Key="Text.ScanRepositories.New" xml:space="preserve">புதியவை</x:String>
+  <x:String x:Key="Text.ScanRepositories.NoDirectories" xml:space="preserve">வருடப்பட அடைவு இல்லை. அதில் உள்ள களஞ்சியங்களைக் கண்டறிய ஒன்றைச் சேர்க்கவும்.</x:String>
+  <x:String x:Key="Text.ScanRepositories.NotExists" xml:space="preserve">இந்த அடைவு இல்லை</x:String>
+  <x:String x:Key="Text.ScanRepositories.Recursive" xml:space="preserve">துணை அடைவுகளையும் வருடு</x:String>
+  <x:String x:Key="Text.ScanRepositories.Removed" xml:space="preserve">அகற்றப்பட்டவை</x:String>
+  <x:String x:Key="Text.ScanRepositories.ReplaceStructure" xml:space="preserve">தற்போதைய அமைப்பை மாற்று</x:String>
+  <x:String x:Key="Text.ScanRepositories.ReplaceStructure.Tips" xml:space="preserve">வருடல் முடிவின் அடிப்படையில் களஞ்சியப் பட்டியலை மீளமைக்கிறது. வருடப்பட்ட அடைவுகளில் இல்லாத களஞ்சியங்கள் அகற்றப்படும்.</x:String>
+  <x:String x:Key="Text.ScanRepositories.Rescan" xml:space="preserve">மீண்டும் வருடு</x:String>
+  <x:String x:Key="Text.ScanRepositories.Scan" xml:space="preserve">வருடு</x:String>
+  <x:String x:Key="Text.ScanRepositories.Scanning" xml:space="preserve">வருடுகிறது</x:String>
   <x:String x:Key="Text.SelfUpdate" xml:space="preserve">புதுப்பிப்புகளைச் சரிபார்...</x:String>
   <x:String x:Key="Text.SelfUpdate.Available" xml:space="preserve">இந்த மென்பொருளின் புதிய பதிப்பு கிடைக்கிறது: </x:String>
   <x:String x:Key="Text.SelfUpdate.Error" xml:space="preserve">புதுப்பிப்புகளைச் சரிபார்க்க முடியவில்லை!</x:String>
@@ -616,7 +632,7 @@
   <x:String x:Key="Text.Welcome.OpenAllInNode" xml:space="preserve">அனைத்து களஞ்சியங்களையும் திற</x:String>
   <x:String x:Key="Text.Welcome.OpenOrInit" xml:space="preserve">களஞ்சியத்தைத் திற</x:String>
   <x:String x:Key="Text.Welcome.OpenTerminal" xml:space="preserve">முனையத்தைத் திற</x:String>
-  <x:String x:Key="Text.Welcome.ScanDefaultCloneDir" xml:space="preserve">இயல்புநிலை நகலி அடைவில் களஞ்சியங்களை மீண்டும் வருடு</x:String>
+  <x:String x:Key="Text.Welcome.ScanDefaultCloneDir" xml:space="preserve">களஞ்சியங்களைக் கண்டறிய அமைக்கப்பட்ட அடைவுகளை வருடு</x:String>
   <x:String x:Key="Text.Welcome.Search" xml:space="preserve">களஞ்சியங்களைத் தேடு...</x:String>
   <x:String x:Key="Text.WorkingCopy" xml:space="preserve">உள்ளக மாற்றங்கள்</x:String>
   <x:String x:Key="Text.WorkingCopy.AddToGitIgnore" xml:space="preserve">அறிவிலி புறக்கணி</x:String>

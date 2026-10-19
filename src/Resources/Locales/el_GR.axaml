@@ -855,8 +855,23 @@
   <x:String x:Key="Text.SaveAs" xml:space="preserve">Αποθήκευση ως...</x:String>
   <x:String x:Key="Text.SaveAsPatchSuccess" xml:space="preserve">Το patch αποθηκεύτηκε με επιτυχία!</x:String>
   <x:String x:Key="Text.ScanRepositories" xml:space="preserve">Σάρωση αποθετηρίων</x:String>
-  <x:String x:Key="Text.ScanRepositories.RootDir" xml:space="preserve">Ριζικός φάκελος:</x:String>
-  <x:String x:Key="Text.ScanRepositories.UseCustomDir" xml:space="preserve">Σάρωση άλλου προσαρμοσμένου φακέλου</x:String>
+  <x:String x:Key="Text.ScanRepositories.AddDirectory" xml:space="preserve">Προσθήκη φακέλου</x:String>
+  <x:String x:Key="Text.ScanRepositories.Apply" xml:space="preserve">Εφαρμογή</x:String>
+  <x:String x:Key="Text.ScanRepositories.ApplyMode" xml:space="preserve">Πώς πρέπει να ενημερωθεί η λίστα αποθετηρίων;</x:String>
+  <x:String x:Key="Text.ScanRepositories.Directories" xml:space="preserve">Φάκελοι προς σάρωση</x:String>
+  <x:String x:Key="Text.ScanRepositories.Found" xml:space="preserve">Βρέθηκαν</x:String>
+  <x:String x:Key="Text.ScanRepositories.KeepStructure" xml:space="preserve">Διατήρηση της τρέχουσας δομής (ομαδοποίησης)</x:String>
+  <x:String x:Key="Text.ScanRepositories.KeepStructure.Tips" xml:space="preserve">Συγχωνεύει τα αποθετηρία που βρέθηκαν με την τρέχουσα λίστα και διατηρεί τις υπάρχουσες ομάδες. Τα αποθετηρία που διαγράφηκαν από τον δίσκο αφαιρούνται.</x:String>
+  <x:String x:Key="Text.ScanRepositories.New" xml:space="preserve">Νέα</x:String>
+  <x:String x:Key="Text.ScanRepositories.NoDirectories" xml:space="preserve">Δεν υπάρχει φάκελος προς σάρωση. Προσθέστε έναν για να ανακαλύψετε τα αποθετηρία που περιέχει.</x:String>
+  <x:String x:Key="Text.ScanRepositories.NotExists" xml:space="preserve">Αυτός ο φάκελος δεν υπάρχει</x:String>
+  <x:String x:Key="Text.ScanRepositories.Recursive" xml:space="preserve">Σάρωση και των υποφακέλων</x:String>
+  <x:String x:Key="Text.ScanRepositories.Removed" xml:space="preserve">Αφαιρέθηκαν</x:String>
+  <x:String x:Key="Text.ScanRepositories.ReplaceStructure" xml:space="preserve">Αντικατάσταση της τρέχουσας δομής</x:String>
+  <x:String x:Key="Text.ScanRepositories.ReplaceStructure.Tips" xml:space="preserve">Αναδημιουργεί τη λίστα αποθετηρίων από το αποτέλεσμα της σάρωσης. Τα αποθετηρία που δεν βρίσκονται στους φακέλους που σαρώθηκαν αφαιρούνται.</x:String>
+  <x:String x:Key="Text.ScanRepositories.Rescan" xml:space="preserve">Επανάσάρωση</x:String>
+  <x:String x:Key="Text.ScanRepositories.Scan" xml:space="preserve">Σάρωση</x:String>
+  <x:String x:Key="Text.ScanRepositories.Scanning" xml:space="preserve">Σάρωση</x:String>
   <x:String x:Key="Text.SelfUpdate" xml:space="preserve">Έλεγχος για ενημερώσεις...</x:String>
   <x:String x:Key="Text.SelfUpdate.Available" xml:space="preserve">Είναι διαθέσιμη νέα έκδοση αυτού του λογισμικού: </x:String>
   <x:String x:Key="Text.SelfUpdate.CurrentVersion" xml:space="preserve">Τρέχουσα έκδοση: </x:String>
@@ -968,7 +983,7 @@
   <x:String x:Key="Text.Welcome.OpenAllInNode" xml:space="preserve">Άνοιγμα όλων των αποθετηρίων</x:String>
   <x:String x:Key="Text.Welcome.OpenOrInit" xml:space="preserve">Άνοιγμα αποθετηρίου</x:String>
   <x:String x:Key="Text.Welcome.OpenTerminal" xml:space="preserve">Άνοιγμα τερματικού</x:String>
-  <x:String x:Key="Text.Welcome.ScanDefaultCloneDir" xml:space="preserve">Επανασάρωση αποθετηρίων στον προεπιλεγμένο φάκελο κλωνοποίησης</x:String>
+  <x:String x:Key="Text.Welcome.ScanDefaultCloneDir" xml:space="preserve">Σάρωση των διαμορφωμένων φακέλων για την ανακάλυψη των αποθετηρίων</x:String>
   <x:String x:Key="Text.Welcome.Search" xml:space="preserve">Αναζήτηση αποθετηρίων...</x:String>
   <x:String x:Key="Text.WorkingCopy" xml:space="preserve">ΤΟΠΙΚΕΣ ΑΛΛΑΓΕΣ</x:String>
   <x:String x:Key="Text.WorkingCopy.AddToGitIgnore" xml:space="preserve">Git Ignore</x:String>

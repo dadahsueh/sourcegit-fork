@@ -827,8 +827,23 @@
   <x:String x:Key="Text.SaveAs" xml:space="preserve">다른 이름으로 저장...</x:String>
   <x:String x:Key="Text.SaveAsPatchSuccess" xml:space="preserve">패치가 성공적으로 저장되었습니다!</x:String>
   <x:String x:Key="Text.ScanRepositories" xml:space="preserve">저장소 스캔</x:String>
-  <x:String x:Key="Text.ScanRepositories.RootDir" xml:space="preserve">루트 디렉터리:</x:String>
-  <x:String x:Key="Text.ScanRepositories.UseCustomDir" xml:space="preserve">다른 사용자 정의 디렉터리 스캔</x:String>
+  <x:String x:Key="Text.ScanRepositories.AddDirectory" xml:space="preserve">디렉터리 추가</x:String>
+  <x:String x:Key="Text.ScanRepositories.Apply" xml:space="preserve">적용</x:String>
+  <x:String x:Key="Text.ScanRepositories.ApplyMode" xml:space="preserve">저장소 목록을 어떻게 업데이트할까요?</x:String>
+  <x:String x:Key="Text.ScanRepositories.Directories" xml:space="preserve">스캔할 디렉터리</x:String>
+  <x:String x:Key="Text.ScanRepositories.Found" xml:space="preserve">발견</x:String>
+  <x:String x:Key="Text.ScanRepositories.KeepStructure" xml:space="preserve">현재 구조(그룹) 유지</x:String>
+  <x:String x:Key="Text.ScanRepositories.KeepStructure.Tips" xml:space="preserve">스캔한 저장소를 현재 목록에 병합하고 기존 그룹을 유지합니다. 디스크에서 삭제된 저장소는 제거됩니다.</x:String>
+  <x:String x:Key="Text.ScanRepositories.New" xml:space="preserve">신규</x:String>
+  <x:String x:Key="Text.ScanRepositories.NoDirectories" xml:space="preserve">스캔할 디렉터리가 없습니다. 추가하면 그 안의 저장소를 찾을 수 있습니다.</x:String>
+  <x:String x:Key="Text.ScanRepositories.NotExists" xml:space="preserve">이 디렉터리는 존재하지 않습니다</x:String>
+  <x:String x:Key="Text.ScanRepositories.Recursive" xml:space="preserve">하위 디렉터리도 스캔</x:String>
+  <x:String x:Key="Text.ScanRepositories.Removed" xml:space="preserve">제거</x:String>
+  <x:String x:Key="Text.ScanRepositories.ReplaceStructure" xml:space="preserve">현재 구조 교체</x:String>
+  <x:String x:Key="Text.ScanRepositories.ReplaceStructure.Tips" xml:space="preserve">스캔 결과로 저장소 목록을 다시 만듭니다. 스캔한 디렉터리에 없는 저장소는 제거됩니다.</x:String>
+  <x:String x:Key="Text.ScanRepositories.Rescan" xml:space="preserve">다시 스캔</x:String>
+  <x:String x:Key="Text.ScanRepositories.Scan" xml:space="preserve">스캔</x:String>
+  <x:String x:Key="Text.ScanRepositories.Scanning" xml:space="preserve">스캔 중</x:String>
   <x:String x:Key="Text.SelfUpdate" xml:space="preserve">업데이트 확인...</x:String>
   <x:String x:Key="Text.SelfUpdate.Available" xml:space="preserve">이 소프트웨어의 새 버전을 사용할 수 있습니다: </x:String>
   <x:String x:Key="Text.SelfUpdate.CurrentVersion" xml:space="preserve">현재 버전:</x:String>
@@ -937,7 +952,7 @@
   <x:String x:Key="Text.Welcome.OpenAllInNode" xml:space="preserve">모든 저장소 열기</x:String>
   <x:String x:Key="Text.Welcome.OpenOrInit" xml:space="preserve">저장소 열기</x:String>
   <x:String x:Key="Text.Welcome.OpenTerminal" xml:space="preserve">터미널 열기</x:String>
-  <x:String x:Key="Text.Welcome.ScanDefaultCloneDir" xml:space="preserve">기본 복제 디렉터리의 저장소 다시 스캔</x:String>
+  <x:String x:Key="Text.Welcome.ScanDefaultCloneDir" xml:space="preserve">설정된 디렉터리를 스캔하여 저장소를 찾습니다</x:String>
   <x:String x:Key="Text.Welcome.Search" xml:space="preserve">저장소 검색...</x:String>
   <x:String x:Key="Text.WorkingCopy" xml:space="preserve">로컬 변경 사항</x:String>
   <x:String x:Key="Text.WorkingCopy.AddToGitIgnore" xml:space="preserve">Git 무시</x:String>

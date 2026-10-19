@@ -164,7 +164,7 @@ namespace SourceGit.ViewModels
 
             var activePage = App.GetLauncher().ActivePage;
             if (activePage != null && activePage.CanCreatePopup())
-                activePage.Popup = new ScanRepositories();
+                activePage.Popup = new ScanRepositories(Preferences.Instance.RepositoryScanDirs.Count > 0);
         }
 
         public void ClearSearchFilter()

@@ -764,8 +764,23 @@ ${pure_files:N} Come ${files:N}, ma senza cartelle</x:String>
   <x:String x:Key="Text.SaveAs" xml:space="preserve">Salva come...</x:String>
   <x:String x:Key="Text.SaveAsPatchSuccess" xml:space="preserve">La patch è stata salvata con successo!</x:String>
   <x:String x:Key="Text.ScanRepositories" xml:space="preserve">Scansiona Repository</x:String>
-  <x:String x:Key="Text.ScanRepositories.RootDir" xml:space="preserve">Cartella Principale:</x:String>
-  <x:String x:Key="Text.ScanRepositories.UseCustomDir" xml:space="preserve">Scansiona un'altra cartella personalizzata</x:String>
+  <x:String x:Key="Text.ScanRepositories.AddDirectory" xml:space="preserve">Aggiungi cartella</x:String>
+  <x:String x:Key="Text.ScanRepositories.Apply" xml:space="preserve">Applica</x:String>
+  <x:String x:Key="Text.ScanRepositories.ApplyMode" xml:space="preserve">Come deve essere aggiornato l'elenco dei repository?</x:String>
+  <x:String x:Key="Text.ScanRepositories.Directories" xml:space="preserve">Cartelle da scansionare</x:String>
+  <x:String x:Key="Text.ScanRepositories.Found" xml:space="preserve">Trovati</x:String>
+  <x:String x:Key="Text.ScanRepositories.KeepStructure" xml:space="preserve">Mantieni la struttura attuale (raggruppamento)</x:String>
+  <x:String x:Key="Text.ScanRepositories.KeepStructure.Tips" xml:space="preserve">Unisci i repository scansionati all'elenco attuale e conserva i gruppi esistenti. I repository eliminati dal disco vengono rimossi.</x:String>
+  <x:String x:Key="Text.ScanRepositories.New" xml:space="preserve">Nuovi</x:String>
+  <x:String x:Key="Text.ScanRepositories.NoDirectories" xml:space="preserve">Nessuna cartella da scansionare. Aggiungine una per individuare i repository al suo interno.</x:String>
+  <x:String x:Key="Text.ScanRepositories.NotExists" xml:space="preserve">Questa cartella non esiste</x:String>
+  <x:String x:Key="Text.ScanRepositories.Recursive" xml:space="preserve">Scansiona anche le sottocartelle</x:String>
+  <x:String x:Key="Text.ScanRepositories.Removed" xml:space="preserve">Rimossi</x:String>
+  <x:String x:Key="Text.ScanRepositories.ReplaceStructure" xml:space="preserve">Sostituisci la struttura attuale</x:String>
+  <x:String x:Key="Text.ScanRepositories.ReplaceStructure.Tips" xml:space="preserve">Ricostruisci l'elenco dei repository a partire dal risultato della scansione. I repository che non si trovano nelle cartelle scansionate vengono rimossi.</x:String>
+  <x:String x:Key="Text.ScanRepositories.Rescan" xml:space="preserve">Riesegui la scansione</x:String>
+  <x:String x:Key="Text.ScanRepositories.Scan" xml:space="preserve">Scansiona</x:String>
+  <x:String x:Key="Text.ScanRepositories.Scanning" xml:space="preserve">Scansione in corso</x:String>
   <x:String x:Key="Text.SelfUpdate" xml:space="preserve">Controlla Aggiornamenti...</x:String>
   <x:String x:Key="Text.SelfUpdate.Available" xml:space="preserve">È disponibile una nuova versione del software:</x:String>
   <x:String x:Key="Text.SelfUpdate.Error" xml:space="preserve">Errore durante il controllo degli aggiornamenti!</x:String>
@@ -868,7 +883,7 @@ ${pure_files:N} Come ${files:N}, ma senza cartelle</x:String>
   <x:String x:Key="Text.Welcome.OpenAllInNode" xml:space="preserve">Apri Tutti i Repository</x:String>
   <x:String x:Key="Text.Welcome.OpenOrInit" xml:space="preserve">Apri Repository</x:String>
   <x:String x:Key="Text.Welcome.OpenTerminal" xml:space="preserve">Apri Terminale</x:String>
-  <x:String x:Key="Text.Welcome.ScanDefaultCloneDir" xml:space="preserve">Riscansiona Repository nella Cartella Clone Predefinita</x:String>
+  <x:String x:Key="Text.Welcome.ScanDefaultCloneDir" xml:space="preserve">Scansiona le cartelle configurate per individuare i repository</x:String>
   <x:String x:Key="Text.Welcome.Search" xml:space="preserve">Cerca Repository...</x:String>
   <x:String x:Key="Text.WorkingCopy" xml:space="preserve">MODIFICHE LOCALI</x:String>
   <x:String x:Key="Text.WorkingCopy.AddToGitIgnore" xml:space="preserve">Git Ignore</x:String>
