@@ -6,6 +6,7 @@
              xmlns:vm="using:SourceGit.ViewModels"
              xmlns:v="using:SourceGit.Views"
              xmlns:c="using:SourceGit.Converters"
+             xmlns:s="using:SourceGit"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="SourceGit.Views.Repository"
              x:DataType="vm:Repository"
@@ -35,92 +36,117 @@
             <Setter Property="CornerRadius" Value="4"/>
           </Style>
           <Style Selector="ListBoxItem:pointerover /template/ ContentPresenter#PART_ContentPresenter">
-            <Setter Property="Background" Value="#18888888"/>
+            <Setter Property="Background" Value="{DynamicResource Brush.FlatButton.BackgroundHovered}"/>
           </Style>
-          <Style Selector="ListBoxItem:selected /template/ ContentPresenter#PART_ContentPresenter">
+          <Style Selector="ListBoxItem:selected /template/ ContentPresenter#PART_ContentPresenter, ListBoxItem:selected:pointerover /template/ ContentPresenter#PART_ContentPresenter">
             <Setter Property="Background" Value="{DynamicResource Brush.AccentHovered}"/>
           </Style>
         </ListBox.Styles>
 
-        <ListBox.ItemsPanel>
-          <ItemsPanelTemplate>
-            <StackPanel Orientation="Vertical"/>
-          </ItemsPanelTemplate>
-        </ListBox.ItemsPanel>
+          <ListBox.ItemsPanel>
+            <ItemsPanelTemplate>
+              <StackPanel Orientation="Vertical"/>
+            </ItemsPanelTemplate>
+          </ListBox.ItemsPanel>
 
-        <ListBoxItem ToolTip.Placement="Right">
-          <ToolTip.Tip>
-            <TextBlock>
-              <Run Text="{DynamicResource Text.Dashboard}" Foreground="{DynamicResource Brush.FG1}"/>
-              <Run Text=" "/>
-              <Run Text="{OnPlatform Ctrl+1, macOS=⌘+1}" FontSize="11" Foreground="{DynamicResource MenuFlyoutItemKeyboardAcceleratorTextForeground}"/>
-            </TextBlock>
-          </ToolTip.Tip>
-          <Path Classes="icon" Data="{StaticResource Icons.Dashboard}"/>
-        </ListBoxItem>
+          <!-- Dashboard (Ctrl+1 / ⌘+1) -->
+          <ListBoxItem ToolTip.Placement="Right">
+            <ToolTip.Tip>
+              <TextBlock>
+                <Run Text="{DynamicResource Text.Dashboard}" Foreground="{DynamicResource Brush.FG1}"/>
+                <Run Text=" "/>
+                <Run Text="{OnPlatform Ctrl+1, macOS=⌘+1}" FontSize="11" Foreground="{DynamicResource MenuFlyoutItemKeyboardAcceleratorTextForeground}"/>
+              </TextBlock>
+            </ToolTip.Tip>
+            <Path Classes="icon" Data="{StaticResource Icons.Dashboard}"/>
+          </ListBoxItem>
 
-        <ListBoxItem IsVisible="{Binding !IsBare}" ToolTip.Placement="Right">
-          <ToolTip.Tip>
-            <TextBlock>
-              <Run Text="{DynamicResource Text.WorkingCopy}" Foreground="{DynamicResource Brush.FG1}"/>
-              <Run Text=" "/>
-              <Run Text="{OnPlatform Ctrl+2, macOS=⌘+2}" FontSize="11" Foreground="{DynamicResource MenuFlyoutItemKeyboardAcceleratorTextForeground}"/>
-            </TextBlock>
-          </ToolTip.Tip>
-          <Grid>
-            <Path Classes="icon" Data="{StaticResource Icons.Changes}"/>
-            <Border Height="14"
-                    Margin="0,4,4,0" Padding="5,0"
-                    CornerRadius="7"
-                    HorizontalAlignment="Right" VerticalAlignment="Top"
-                    Background="{DynamicResource Brush.Accent}"
-                    IsVisible="{Binding LocalChangesCount, Mode=OneWay, Converter={x:Static c:IntConverters.IsGreaterThanZero}}">
-              <TextBlock Text="{Binding LocalChangesCount, Mode=OneWay, Converter={x:Static c:IntConverters.ToBadgeWithLimit}}"
-                         Foreground="White"
-                         FontFamily="{DynamicResource Fonts.Monospace}"
-                         FontSize="10"/>
-            </Border>
-            <Path Width="12" Height="12"
-                  Margin="0,0,4,4"
-                  HorizontalAlignment="Right" VerticalAlignment="Bottom"
-                  Data="{StaticResource Icons.Info}"
-                  Fill="DarkOrange"
-                  IsVisible="{Binding InProgressContext, Converter={x:Static ObjectConverters.IsNotNull}}"/>
-          </Grid>
-        </ListBoxItem>
+          <!-- Working Copy (Ctrl+2 / ⌘+2) -->
+          <ListBoxItem IsVisible="{Binding !IsBare}" ToolTip.Placement="Right">
+            <ToolTip.Tip>
+              <TextBlock>
+                <Run Text="{DynamicResource Text.WorkingCopy}" Foreground="{DynamicResource Brush.FG1}"/>
+                <Run Text=" "/>
+                <Run Text="{OnPlatform Ctrl+2, macOS=⌘+2}" FontSize="11" Foreground="{DynamicResource MenuFlyoutItemKeyboardAcceleratorTextForeground}"/>
+              </TextBlock>
+            </ToolTip.Tip>
+            <Grid>
+              <Path Classes="icon" Data="{StaticResource Icons.Changes}"/>
+              <Border Height="14"
+                      Margin="0,6,6,0" Padding="5,0"
+                      CornerRadius="7"
+                      HorizontalAlignment="Right" VerticalAlignment="Top"
+                      Background="{DynamicResource Brush.Accent}"
+                      IsVisible="{Binding LocalChangesCount, Mode=OneWay, Converter={x:Static c:IntConverters.IsGreaterThanZero}}">
+                <TextBlock Text="{Binding LocalChangesCount, Mode=OneWay, Converter={x:Static c:IntConverters.ToBadgeWithLimit}}"
+                           Foreground="White"
+                           FontFamily="{DynamicResource Fonts.Monospace}"
+                           FontSize="10"/>
+              </Border>
+              <Path Width="12" Height="12"
+                    Margin="0,0,6,6"
+                    HorizontalAlignment="Right" VerticalAlignment="Bottom"
+                    Data="{StaticResource Icons.Info}"
+                    Fill="DarkOrange"
+                    IsVisible="{Binding InProgressContext, Converter={x:Static ObjectConverters.IsNotNull}}"/>
+            </Grid>
+          </ListBoxItem>
 
-        <ListBoxItem IsVisible="{Binding !IsBare}" ToolTip.Placement="Right">
-          <ToolTip.Tip>
-            <TextBlock>
-              <Run Text="{DynamicResource Text.Stashes}" Foreground="{DynamicResource Brush.FG1}"/>
-              <Run Text=" "/>
-              <Run Text="{OnPlatform Ctrl+3, macOS=⌘+3}" FontSize="11" Foreground="{DynamicResource MenuFlyoutItemKeyboardAcceleratorTextForeground}"/>
-            </TextBlock>
-          </ToolTip.Tip>
-          <Grid>
-            <Path Classes="icon" Data="{StaticResource Icons.Stashes}"/>
-            <Border Height="14"
-                    Margin="0,4,4,0" Padding="5,0"
-                    CornerRadius="7"
-                    HorizontalAlignment="Right" VerticalAlignment="Top"
-                    Background="{DynamicResource Brush.Accent}"
-                    IsVisible="{Binding StashesCount, Mode=OneWay, Converter={x:Static c:IntConverters.IsGreaterThanZero}}">
-              <TextBlock Text="{Binding StashesCount, Mode=OneWay, Converter={x:Static c:IntConverters.ToBadgeWithLimit}}"
-                         Foreground="White"
-                         FontFamily="{DynamicResource Fonts.Monospace}"
-                         FontSize="10"/>
-            </Border>
-          </Grid>
-        </ListBoxItem>
-      </ListBox>
-      
+          <!-- Stashes (Ctrl+3 / ⌘+3) -->
+          <ListBoxItem IsVisible="{Binding !IsBare}" ToolTip.Placement="Right">
+            <ToolTip.Tip>
+              <TextBlock>
+                <Run Text="{DynamicResource Text.Stashes}" Foreground="{DynamicResource Brush.FG1}"/>
+                <Run Text=" "/>
+                <Run Text="{OnPlatform Ctrl+3, macOS=⌘+3}" FontSize="11" Foreground="{DynamicResource MenuFlyoutItemKeyboardAcceleratorTextForeground}"/>
+              </TextBlock>
+            </ToolTip.Tip>
+            <Grid>
+              <Path Classes="icon" Data="{StaticResource Icons.Stashes}"/>
+              <Border Height="14"
+                      Margin="0,6,6,0" Padding="5,0"
+                      CornerRadius="7"
+                      HorizontalAlignment="Right" VerticalAlignment="Top"
+                      Background="{DynamicResource Brush.Accent}"
+                      IsVisible="{Binding StashesCount, Mode=OneWay, Converter={x:Static c:IntConverters.IsGreaterThanZero}}">
+                <TextBlock Text="{Binding StashesCount, Mode=OneWay, Converter={x:Static c:IntConverters.ToBadgeWithLimit}}"
+                           Foreground="White"
+                           FontFamily="{DynamicResource Fonts.Monospace}"
+                           FontSize="10"/>
+              </Border>
+            </Grid>
+          </ListBoxItem>
+        </ListBox>
+        
+        <!-- Settings at bottom of Activity Rail -->
       <Button Grid.Row="2"
               Classes="icon_button"
               Width="40" Height="40"
               Margin="4,0"
-              Click="OnOpenConfigure"
-              ToolTip.Tip="{DynamicResource Text.Repository.Configure}"
+              CornerRadius="4"
+              Command="{x:Static s:App.OpenPreferencesCommand}"
               ToolTip.Placement="Right">
+        <ToolTip.Tip>
+          <TextBlock>
+            <Run Text="{DynamicResource Text.Preferences}" Foreground="{DynamicResource Brush.FG1}"/>
+            <Run Text=" "/>
+            <Run Text="{OnPlatform Ctrl+\,, macOS=⌘+\,}" FontSize="11" Foreground="{DynamicResource MenuFlyoutItemKeyboardAcceleratorTextForeground}"/>
+          </TextBlock>
+        </ToolTip.Tip>
+        <Button.ContextFlyout>
+          <MenuFlyout Placement="RightEdgeAlignedBottom">
+            <MenuItem Header="{DynamicResource Text.Preferences}" Command="{x:Static s:App.OpenPreferencesCommand}" InputGesture="Ctrl+,">
+              <MenuItem.Icon>
+                <Path Width="14" Height="14" Data="{StaticResource Icons.Settings}"/>
+              </MenuItem.Icon>
+            </MenuItem>
+            <MenuItem Header="{DynamicResource Text.Repository.Configure}" Click="OnOpenConfigure">
+              <MenuItem.Icon>
+                <Path Width="14" Height="14" Data="{StaticResource Icons.Folder}"/>
+              </MenuItem.Icon>
+            </MenuItem>
+          </MenuFlyout>
+        </Button.ContextFlyout>
         <Path Width="18" Height="18" Data="{StaticResource Icons.Settings}"/>
       </Button>
     </Grid>
@@ -250,7 +276,7 @@
           </Grid>
 
           <!-- Main Body -->
-          <Grid Grid.Row="1" Background="{DynamicResource Brush.Window}">
+          <Grid Grid.Row="2" Background="{DynamicResource Brush.Contents}">
             <Grid.ColumnDefinitions>
               <ColumnDefinition Width="{Binding #ThisControl.SidebarWidth, Mode=TwoWay}" MinWidth="{Binding #ThisControl.SidebarMinWidth, Mode=OneWay}"/>
               <ColumnDefinition Width="Auto"/>
@@ -258,7 +284,7 @@
             </Grid.ColumnDefinitions>
 
             <!-- Sidebar (Branches/Remotes/Tags/Submodules/Worktrees) -->
-            <Grid Grid.Column="0" RowDefinitions="Auto,*" IsVisible="{Binding #ThisControl.IsNormalSidebarVisible, Mode=OneWay}">              
+            <Grid Grid.Column="0" RowDefinitions="Auto,*" IsVisible="{Binding #ThisControl.IsNormalSidebarVisible, Mode=OneWay}">
               <!-- Filter Branches/Tags/Submodules -->
               <TextBox Grid.Row="0"
                        x:Name="FilterBox"
@@ -292,7 +318,10 @@
                 </TextBox.InnerRightContent>
               </TextBox>
 
-              <Grid Grid.Row="1" x:Name="LeftSidebarGroups" Margin="0,4,0,0" RowDefinitions="28,Auto,28,Auto,28,Auto,28,Auto,28,Auto" SizeChanged="OnLeftSidebarSizeChanged">
+              <ScrollViewer Grid.Row="1"
+                            HorizontalScrollBarVisibility="Disabled"
+                            VerticalScrollBarVisibility="Auto">
+                <Grid x:Name="LeftSidebarGroups" Margin="0,0,0,0" RowDefinitions="28,Auto,28,Auto,28,Auto,28,Auto,28,Auto" SizeChanged="OnLeftSidebarSizeChanged">
                 <!-- Local Branches -->
                 <ToggleButton Grid.Row="0" Classes="group_expander" IsChecked="{Binding IsLocalBranchGroupExpanded, Mode=TwoWay}">
                   <Grid ColumnDefinitions="16,*,Auto">
@@ -316,7 +345,6 @@
                 </ToggleButton>
                 <v:BranchTree Grid.Row="1"
                               x:Name="LocalBranchTree"
-                              Height="0"
                               Margin="6,0,4,0"
                               Nodes="{Binding LocalBranchTrees}"
                               IsVisible="{Binding IsLocalBranchGroupExpanded}"
@@ -350,7 +378,6 @@
                 </ToggleButton>
                 <v:BranchTree Grid.Row="3"
                               x:Name="RemoteBranchTree"
-                              Height="0"
                               Margin="6,0,4,0"
                               Nodes="{Binding RemoteBranchTrees}"
                               IsVisible="{Binding IsRemoteGroupExpanded}"
@@ -396,7 +423,6 @@
                 </ToggleButton>
                 <v:TagsView Grid.Row="5"
                             x:Name="TagsList"
-                            Height="0"
                             Margin="6,0,4,0"
                             Background="Transparent"
                             Content="{Binding VisibleTags}"
@@ -429,7 +455,7 @@
                             Command="{Binding UpdateSubmodules}"
                             IsVisible="{Binding Submodules, Converter={x:Static c:ListConverters.IsNotNullOrEmpty}}"
                             ToolTip.Tip="{DynamicResource Text.Repository.Submodules.Update}">
-                      <Path Width="12" Height="12" Data="{StaticResource Icons.Loading}"/>
+                      <Path Width="12" Height="12" Data="{StaticResource Icons.Refresh}"/>
                     </Button>
                     <Button Grid.Column="4"
                             Classes="icon_button"
@@ -443,7 +469,6 @@
                 </ToggleButton>
                 <v:SubmodulesView Grid.Row="7"
                                   x:Name="SubmoduleList"
-                                  Height="0"
                                   Margin="6,0,4,0"
                                   Content="{Binding VisibleSubmodules}"
                                   RowsChanged="OnLeftSidebarRowsChanged"
@@ -466,7 +491,7 @@
                             Click="OnPruneWorktrees"
                             IsVisible="{Binding Worktrees, Converter={x:Static c:ListConverters.IsNotNullOrEmpty}}"
                             ToolTip.Tip="{DynamicResource Text.Repository.Worktrees.Prune}">
-                      <Path Width="12" Height="12" Data="{StaticResource Icons.Loading}"/>
+                      <Path Width="12" Height="12" Data="{StaticResource Icons.Clean}"/>
                     </Button>
                     <Button Grid.Column="3"
                             Classes="icon_button"
@@ -481,7 +506,6 @@
                 </ToggleButton>
                 <ListBox Grid.Row="9"
                          x:Name="WorktreeList"
-                         Height="0"
                          Margin="6,0,4,0"
                          Classes="repo_left_content_list"
                          ItemsSource="{Binding Worktrees, Mode=OneWay}"
@@ -571,7 +595,8 @@
                   </ListBox.ItemTemplate>
                 </ListBox>
               </Grid>
-            </Grid>
+            </ScrollViewer>
+          </Grid>
 
             <!-- Commit Search Panel -->
             <v:CommitSearchView Grid.Column="0"

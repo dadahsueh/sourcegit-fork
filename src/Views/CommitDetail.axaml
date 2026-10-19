@@ -10,12 +10,15 @@
              x:Class="SourceGit.Views.CommitDetail"
              x:DataType="vm:CommitDetail"
              x:Name="ThisControl">
-  <TabControl SelectedIndex="{Binding ActiveTabIndex, Mode=TwoWay}" Padding="0,4">
+  <TabControl SelectedIndex="{Binding ActiveTabIndex, Mode=TwoWay}" Padding="0,2">
     <!-- Information Page -->
     <TabItem>
       <TabItem.Header>
         <Border Background="Transparent" PointerPressed="OnTabHeaderPointerPressed">
-          <TextBlock Classes="tab_header" Text="{DynamicResource Text.CommitDetail.Info}"/>
+          <StackPanel Orientation="Horizontal" Spacing="6" VerticalAlignment="Center">
+            <Path Width="12" Height="12" Data="{StaticResource Icons.Info}"/>
+            <TextBlock Classes="tab_header" Text="{DynamicResource Text.CommitDetail.Info}"/>
+          </StackPanel>
         </Border>
       </TabItem.Header>
 
@@ -32,11 +35,11 @@
                             Margin="0,0,12,0"/>
 
           <!-- Line -->
-          <Rectangle Height=".65" Margin="8,8,12,8" Fill="{DynamicResource Brush.Border2}"/>
+          <Rectangle Height=".65" Margin="12,4,12,4" Fill="{DynamicResource Brush.Border2}"/>
 
           <!-- Change List -->
           <ListBox Background="Transparent"
-                   Margin="64,0,12,4"
+                   Margin="12,0,12,4"
                    SelectionMode="Single"
                    ItemsSource="{Binding Changes, Converter={x:Static c:ListConverters.Top100Changes}}"
                    KeyDown="OnCommitListKeyDown">
@@ -77,7 +80,7 @@
           </ListBox>
 
           <!-- Only Top100 Tip -->
-          <TextBlock Margin="108,0,12,16"
+          <TextBlock Margin="12,4,12,16"
                      Text="{DynamicResource Text.CommitDetail.Info.GotoChangesPage}"
                      Foreground="{DynamicResource Brush.FG2}"
                      IsVisible="{Binding Changes, Converter={x:Static c:ListConverters.IsOnlyTop100Shows}}"/>
@@ -88,7 +91,10 @@
     <TabItem>
       <TabItem.Header>
         <Border Background="Transparent" PointerPressed="OnTabHeaderPointerPressed">
-          <TextBlock Classes="tab_header" Text="{DynamicResource Text.CommitDetail.Changes}"/>
+          <StackPanel Orientation="Horizontal" Spacing="6" VerticalAlignment="Center">
+            <Path Width="12" Height="12" Data="{StaticResource Icons.Diff}"/>
+            <TextBlock Classes="tab_header" Text="{DynamicResource Text.CommitDetail.Changes}"/>
+          </StackPanel>
         </Border>
       </TabItem.Header>
       <v:CommitChanges Margin="4,0"
@@ -98,7 +104,10 @@
     <TabItem>
       <TabItem.Header>
         <Border Background="Transparent" PointerPressed="OnTabHeaderPointerPressed">
-          <TextBlock Classes="tab_header" Text="{DynamicResource Text.CommitDetail.Files}"/>
+          <StackPanel Orientation="Horizontal" Spacing="6" VerticalAlignment="Center">
+            <Path Width="12" Height="12" Data="{StaticResource Icons.Folder}"/>
+            <TextBlock Classes="tab_header" Text="{DynamicResource Text.CommitDetail.Files}"/>
+          </StackPanel>
         </Border>
       </TabItem.Header>
       <v:RevisionFiles Margin="4,0"

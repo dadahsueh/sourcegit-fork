@@ -313,11 +313,14 @@
       <ContentControl Content="{Binding DetailContext, Mode=OneWay}">
         <ContentControl.DataTemplates>
           <DataTemplate DataType="m:Null">
-            <TabControl Padding="0,4">
+            <TabControl Padding="0,2">
                 <TabItem>
                   <TabItem.Header>
                     <Border Background="Transparent" PointerPressed="OnTabHeaderPointerPressed">
-                      <TextBlock Classes="tab_header" Text="{DynamicResource Text.CommitDetail.Info}"/>
+                      <StackPanel Orientation="Horizontal" Spacing="6" VerticalAlignment="Center">
+                        <Path Width="12" Height="12" Data="{StaticResource Icons.Info}"/>
+                        <TextBlock Classes="tab_header" Text="{DynamicResource Text.CommitDetail.Info}"/>
+                      </StackPanel>
                     </Border>
                   </TabItem.Header>
 
@@ -338,13 +341,19 @@
 
                 <TabItem IsEnabled="False">
                   <TabItem.Header>
-                    <TextBlock Classes="tab_header" Text="{DynamicResource Text.CommitDetail.Changes}"/>
+                    <StackPanel Orientation="Horizontal" Spacing="6" VerticalAlignment="Center">
+                      <Path Width="12" Height="12" Data="{StaticResource Icons.Diff}"/>
+                      <TextBlock Classes="tab_header" Text="{DynamicResource Text.CommitDetail.Changes}"/>
+                    </StackPanel>
                   </TabItem.Header>
                 </TabItem>
 
                 <TabItem IsEnabled="False">
                   <TabItem.Header>
-                    <TextBlock Classes="tab_header" Text="{DynamicResource Text.CommitDetail.Files}"/>
+                    <StackPanel Orientation="Horizontal" Spacing="6" VerticalAlignment="Center">
+                      <Path Width="12" Height="12" Data="{StaticResource Icons.Folder}"/>
+                      <TextBlock Classes="tab_header" Text="{DynamicResource Text.CommitDetail.Files}"/>
+                    </StackPanel>
                   </TabItem.Header>
                 </TabItem>
               </TabControl>
@@ -355,17 +364,23 @@
           </DataTemplate>
 
           <DataTemplate DataType="vm:RevisionCompare">
-            <TabControl SelectedIndex="1" Padding="0">
+            <TabControl SelectedIndex="1" Padding="0,2">
               <TabItem IsEnabled="False">
                 <TabItem.Header>
-                  <TextBlock Classes="tab_header" Text="{DynamicResource Text.CommitDetail.Info}"/>
+                  <StackPanel Orientation="Horizontal" Spacing="6" VerticalAlignment="Center">
+                    <Path Width="12" Height="12" Data="{StaticResource Icons.Info}"/>
+                    <TextBlock Classes="tab_header" Text="{DynamicResource Text.CommitDetail.Info}"/>
+                  </StackPanel>
                 </TabItem.Header>
               </TabItem>
 
               <TabItem>
                 <TabItem.Header>
                   <Border Background="Transparent" PointerPressed="OnTabHeaderPointerPressed">
-                    <TextBlock Classes="tab_header" Text="{DynamicResource Text.CommitDetail.Changes}"/>
+                    <StackPanel Orientation="Horizontal" Spacing="6" VerticalAlignment="Center">
+                      <Path Width="12" Height="12" Data="{StaticResource Icons.Diff}"/>
+                      <TextBlock Classes="tab_header" Text="{DynamicResource Text.CommitDetail.Changes}"/>
+                    </StackPanel>
                   </Border>
                 </TabItem.Header>
 
@@ -374,18 +389,24 @@
 
               <TabItem IsEnabled="False">
                 <TabItem.Header>
-                  <TextBlock Classes="tab_header" Text="{DynamicResource Text.CommitDetail.Files}"/>
+                  <StackPanel Orientation="Horizontal" Spacing="6" VerticalAlignment="Center">
+                    <Path Width="12" Height="12" Data="{StaticResource Icons.Folder}"/>
+                    <TextBlock Classes="tab_header" Text="{DynamicResource Text.CommitDetail.Files}"/>
+                  </StackPanel>
                 </TabItem.Header>
               </TabItem>
             </TabControl>
           </DataTemplate>
 
           <DataTemplate DataType="m:Count">
-            <TabControl Padding="0,4">
+            <TabControl Padding="0,2">
               <TabItem>
                 <TabItem.Header>
                   <Border Background="Transparent" PointerPressed="OnTabHeaderPointerPressed">
-                    <TextBlock Classes="tab_header" Text="{DynamicResource Text.CommitDetail.Info}"/>
+                    <StackPanel Orientation="Horizontal" Spacing="6" VerticalAlignment="Center">
+                      <Path Width="12" Height="12" Data="{StaticResource Icons.Info}"/>
+                      <TextBlock Classes="tab_header" Text="{DynamicResource Text.CommitDetail.Info}"/>
+                    </StackPanel>
                   </Border>
                 </TabItem.Header>
 
@@ -408,13 +429,19 @@
 
               <TabItem IsEnabled="False">
                 <TabItem.Header>
-                  <TextBlock Classes="tab_header" Text="{DynamicResource Text.CommitDetail.Changes}"/>
+                  <StackPanel Orientation="Horizontal" Spacing="6" VerticalAlignment="Center">
+                    <Path Width="12" Height="12" Data="{StaticResource Icons.Diff}"/>
+                    <TextBlock Classes="tab_header" Text="{DynamicResource Text.CommitDetail.Changes}"/>
+                  </StackPanel>
                 </TabItem.Header>
               </TabItem>
 
               <TabItem IsEnabled="False">
                 <TabItem.Header>
-                  <TextBlock Classes="tab_header" Text="{DynamicResource Text.CommitDetail.Files}"/>
+                  <StackPanel Orientation="Horizontal" Spacing="6" VerticalAlignment="Center">
+                    <Path Width="12" Height="12" Data="{StaticResource Icons.Folder}"/>
+                    <TextBlock Classes="tab_header" Text="{DynamicResource Text.CommitDetail.Files}"/>
+                  </StackPanel>
                 </TabItem.Header>
               </TabItem>
             </TabControl>

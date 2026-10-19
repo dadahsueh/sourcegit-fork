@@ -12,156 +12,167 @@
   <UserControl.DataTemplates>
     <DataTemplate DataType="m:Commit">
       <StackPanel Orientation="Vertical">
-        <!-- Author & Committer -->
-        <UniformGrid Rows="1" Margin="0,8">
-          <!-- Author -->
-          <Grid ColumnDefinitions="96,*">
-            <v:Avatar Grid.Column="0" Width="64" Height="64" HorizontalAlignment="Right" User="{Binding Author}"/>
-            <StackPanel Grid.Column="1" Margin="16,0,4,0" Orientation="Vertical">
-              <TextBlock Classes="group_header_label" Text="{DynamicResource Text.CommitDetail.Info.Author}"/>
-              <Border Margin="0,10,0,8" Background="Transparent" ToolTip.Tip="{Binding Author}" Tag="{Binding Author}" ContextRequested="OnUserContextRequested">
-                <TextBlock Foreground="{DynamicResource Brush.FG2}" TextTrimming="CharacterEllipsis">
-                  <Run Text="{Binding Author.Name, Mode=OneWay}" Foreground="{DynamicResource Brush.FG1}"/>
-                  <Run Text="{Binding Author.Email, Mode=OneWay}"/>
-                </TextBlock>
-              </Border>
-              <v:DateTimePresenter Margin="2,0,0,0"
-                                   Timestamp="{Binding AuthorTime}"
-                                   FontSize="{Binding Source={x:Static vm:Preferences.Instance}, Path=DefaultFontSize, Converter={x:Static c:DoubleConverters.Decrease}}"
-                                   Foreground="{DynamicResource Brush.FG2}"
-                                   Background="Transparent"
-                                   ContextRequested="OnDateTimeContextMenuRequested"/>
+        <!-- Compact Metadata Header Card -->
+        <Border Margin="10,6,10,4"
+                Padding="8,6"
+                Background="{DynamicResource Brush.SubPanel}"
+                BorderBrush="{DynamicResource Brush.Border0}"
+                BorderThickness="1"
+                CornerRadius="6">
+          <Grid RowDefinitions="Auto,Auto" ColumnDefinitions="Auto,*,Auto">
+            <!-- Compact Avatar -->
+            <v:Avatar Grid.Row="0" Grid.Column="0" Width="28" Height="28" VerticalAlignment="Center" Margin="0,0,8,0" User="{Binding Author}"/>
+
+            <!-- Author & Committer Info -->
+            <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Vertical" VerticalAlignment="Center" Spacing="2">
+              <StackPanel Orientation="Horizontal" Spacing="6">
+                <!-- Author -->
+                <Border Background="Transparent" ToolTip.Tip="{Binding Author}" Tag="{Binding Author}" ContextRequested="OnUserContextRequested">
+                  <TextBlock TextTrimming="CharacterEllipsis">
+                    <Run Text="{Binding Author.Name, Mode=OneWay}" FontWeight="SemiBold" Foreground="{DynamicResource Brush.FG1}"/>
+                    <Run Text=" "/>
+                    <Run Text="{Binding Author.Email, Mode=OneWay}" Foreground="{DynamicResource Brush.FG2}" FontSize="11"/>
+                  </TextBlock>
+                </Border>
+                <TextBlock Text="•" Foreground="{DynamicResource Brush.FG2}" FontSize="10" VerticalAlignment="Center"/>
+                <v:DateTimePresenter Timestamp="{Binding AuthorTime}"
+                                     FontSize="{Binding Source={x:Static vm:Preferences.Instance}, Path=DefaultFontSize, Converter={x:Static c:DoubleConverters.Decrease}}"
+                                     Foreground="{DynamicResource Brush.FG2}"
+                                     Background="Transparent"
+                                     VerticalAlignment="Center"
+                                     ContextRequested="OnDateTimeContextMenuRequested"/>
+              </StackPanel>
+
+              <!-- Committer (only if visible / different) -->
+              <StackPanel Orientation="Horizontal" Spacing="6" IsVisible="{Binding IsCommitterVisible}">
+                <TextBlock Text="{DynamicResource Text.CommitDetail.Info.Committer}" FontSize="11" Foreground="{DynamicResource Brush.FG2}"/>
+                <Border Background="Transparent" ToolTip.Tip="{Binding Committer}" Tag="{Binding Committer}" ContextRequested="OnUserContextRequested">
+                  <TextBlock FontSize="11" TextTrimming="CharacterEllipsis">
+                    <Run Text="{Binding Committer.Name, Mode=OneWay}" Foreground="{DynamicResource Brush.FG1}"/>
+                    <Run Text=" "/>
+                    <Run Text="{Binding Committer.Email, Mode=OneWay}" Foreground="{DynamicResource Brush.FG2}"/>
+                  </TextBlock>
+                </Border>
+                <TextBlock Text="•" Foreground="{DynamicResource Brush.FG2}" FontSize="10" VerticalAlignment="Center"/>
+                <v:DateTimePresenter Timestamp="{Binding CommitterTime}"
+                                     FontSize="11"
+                                     Foreground="{DynamicResource Brush.FG2}"
+                                     Background="Transparent"
+                                     VerticalAlignment="Center"
+                                     ContextRequested="OnDateTimeContextMenuRequested"/>
+              </StackPanel>
             </StackPanel>
-          </Grid>
 
-          <!-- Committer -->
-          <Grid ColumnDefinitions="96,*" IsVisible="{Binding IsCommitterVisible}">
-            <v:Avatar Grid.Column="0" Width="64" Height="64" HorizontalAlignment="Right" User="{Binding Committer}"/>
-            <StackPanel Grid.Column="1" Margin="16,0,4,0" Orientation="Vertical">
-              <TextBlock Classes="group_header_label" Text="{DynamicResource Text.CommitDetail.Info.Committer}"/>
-              <Border Margin="0,10,0,8" Background="Transparent" ToolTip.Tip="{Binding Committer}" Tag="{Binding Committer}" ContextRequested="OnUserContextRequested">
-                <TextBlock Foreground="{DynamicResource Brush.FG2}" TextTrimming="CharacterEllipsis">
-                  <Run Text="{Binding Committer.Name, Mode=OneWay}" Foreground="{DynamicResource Brush.FG1}"/>
-                  <Run Text="{Binding Committer.Email, Mode=OneWay}"/>
-                </TextBlock>
-              </Border>
-              <v:DateTimePresenter Margin="2,0,0,0"
-                                   Timestamp="{Binding CommitterTime}"
-                                   FontSize="{Binding Source={x:Static vm:Preferences.Instance}, Path=DefaultFontSize, Converter={x:Static c:DoubleConverters.Decrease}}"
-                                   Foreground="{DynamicResource Brush.FG2}"
-                                   Background="Transparent"
-                                   ContextRequested="OnDateTimeContextMenuRequested"/>
-            </StackPanel>
-          </Grid>
-        </UniformGrid>
-
-        <!-- Line -->
-        <Rectangle Height=".65" Margin="8,8,0,8" Fill="{DynamicResource Brush.Border2}" VerticalAlignment="Center"/>
-
-        <!-- Base Information -->
-        <Grid RowDefinitions="24,Auto,Auto,Auto" ColumnDefinitions="96,*">
-          <!-- SHA -->
-          <TextBlock Grid.Row="0" Grid.Column="0" Classes="info_label" VerticalAlignment="Top" Margin="0,4,0,0" Text="{DynamicResource Text.CommitDetail.Info.SHA}" />
-          <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal" Height="24">
-            <TextBlock Text="{Binding SHA}" Margin="12,0,4,0" FontFamily="{DynamicResource Fonts.Monospace}" VerticalAlignment="Center"/>
-
-            <v:CopyButton Width="24" Cursor="Hand" CopyText="{Binding SHA}" ToolTip.Tip="{DynamicResource Text.Copy}"/>
-
-            <Button Classes="icon_button" Width="24" Cursor="Hand" Click="OnOpenContainsIn" IsVisible="{Binding #ThisControl.SupportsContainsIn}" ToolTip.Tip="{DynamicResource Text.CommitDetail.Info.ContainsIn}">
-              <Path Width="14" Height="14" Margin="0,1,0,0" Data="{StaticResource Icons.Milestone}"/>
-            </Button>
-
-            <Button Classes="icon_button" Width="24" Cursor="Hand" Click="OnOpenWebLink" IsVisible="{Binding #ThisControl.WebLinks, Converter={x:Static c:ListConverters.IsNotNullOrEmpty}}" ToolTip.Tip="{DynamicResource Text.CommitDetail.Info.WebLinks}">
-              <Path Width="12" Height="12" Data="{StaticResource Icons.Link}" Fill="{DynamicResource Brush.Link}"/>
-            </Button>
-
-            <ContentControl Content="{Binding #ThisControl.SignInfo}">
-              <ContentControl.DataTemplates>
-                <DataTemplate DataType="m:CommitSignInfo">
-                  <Border Width="24" Background="Transparent">
-                    <ToolTip.Tip>
-                      <StackPanel Orientation="Vertical">
-                        <TextBlock Margin="0,0,0,12" Text="{Binding ToolTip}"/>
-                        <Grid ColumnDefinitions="Auto,8,Auto" RowDefinitions="Auto,Auto">
-                          <TextBlock Grid.Row="0" Grid.Column="0" Text="{DynamicResource Text.CommitDetail.Info.Signer}" IsVisible="{Binding HasSigner}" VerticalAlignment="Center"/>
-                          <TextBlock Grid.Row="0" Grid.Column="2" Text="{Binding Signer}" IsVisible="{Binding HasSigner}" VerticalAlignment="Center"/>
-                          <TextBlock Grid.Row="1" Grid.Column="0" Text="{DynamicResource Text.CommitDetail.Info.Key}" VerticalAlignment="Center"/>
-                          <TextBlock Grid.Row="1" Grid.Column="2" Text="{Binding Key}" VerticalAlignment="Center"/>
-                        </Grid>
-                      </StackPanel>
-                    </ToolTip.Tip>
-                    <Path Width="14" Height="14" Data="{StaticResource Icons.Verified}" Fill="{Binding Brush}"/>
-                  </Border>
-                </DataTemplate>
-              </ContentControl.DataTemplates>
-            </ContentControl>
-          </StackPanel>
-
-          <!-- PARENTS -->
-          <TextBlock Grid.Row="1" Grid.Column="0" Classes="info_label" VerticalAlignment="Top" Margin="0,4,0,0" Text="{DynamicResource Text.CommitDetail.Info.Parents}" IsVisible="{Binding Parents, Converter={x:Static c:ListConverters.IsNotNullOrEmpty}}"/>
-          <ItemsControl Grid.Row="1" Grid.Column="1" Height="24" Margin="12,0,0,0" ItemsSource="{Binding Parents}" IsVisible="{Binding Parents, Converter={x:Static c:ListConverters.IsNotNullOrEmpty}}">
-            <ItemsControl.ItemsPanel>
-              <ItemsPanelTemplate>
-                <StackPanel Orientation="Horizontal" VerticalAlignment="Center"/>
-              </ItemsPanelTemplate>
-            </ItemsControl.ItemsPanel>
-
-            <ItemsControl.ItemTemplate>
-              <DataTemplate>
-                <TextBlock Text="{Binding Converter={x:Static c:StringConverters.ToShortSHA}}"
+            <!-- Right: SHA, Copy, Milestone, WebLink, Verified -->
+            <StackPanel Grid.Row="0" Grid.Column="2" Orientation="Horizontal" VerticalAlignment="Center" Spacing="3">
+              <Border Padding="6,2" CornerRadius="4" Background="{DynamicResource Brush.Contents}" BorderThickness="1" BorderBrush="{DynamicResource Brush.Border0}">
+                <TextBlock Text="{Binding Converter={x:Static c:StringConverters.ToShortSHA}, Path=SHA}"
+                           ToolTip.Tip="{Binding SHA}"
                            FontFamily="{DynamicResource Fonts.Monospace}"
-                           Foreground="DarkOrange"
-                           TextDecorations="Underline"
-                           Cursor="Hand"
-                           Margin="0,0,16,0"
-                           PointerEntered="OnSHAPointerEntered"
-                           PointerPressed="OnSHAPressed"
-                           ContextRequested="OnSHAContextRequested"
-                           ToolTip.ShowDelay="0">
-                  <ToolTip.IsOpen>
-                    <MultiBinding Converter="{x:Static BoolConverters.And}">
-                      <Binding Path="$self.IsPointerOver"/>
-                      <Binding Path="$self.(ToolTip.Tip)" Converter="{x:Static ObjectConverters.IsNotNull}"/>
-                    </MultiBinding>
-                  </ToolTip.IsOpen>
+                           FontSize="11"
+                           VerticalAlignment="Center"/>
+              </Border>
 
-                  <TextBlock.DataTemplates>
-                    <DataTemplate DataType="m:Commit">
-                      <StackPanel MinWidth="400" Orientation="Vertical">
-                        <Grid ColumnDefinitions="Auto,*,Auto">
-                          <v:Avatar Grid.Column="0" Width="16" Height="16" VerticalAlignment="Center" IsHitTestVisible="False" User="{Binding Author}"/>
-                          <TextBlock Grid.Column="1" Text="{Binding Author.Name}" Margin="8,0,0,0"/>
-                          <v:DateTimePresenter Grid.Column="2"
-                                               Margin="8,0,0,0"
-                                               Timestamp="{Binding CommitterTime}"
-                                               Foreground="{DynamicResource Brush.FG2}"/>
-                        </Grid>
+              <v:CopyButton Width="22" Height="22" Cursor="Hand" CopyText="{Binding SHA}" ToolTip.Tip="{DynamicResource Text.Copy}"/>
 
-                        <TextBlock Margin="0,8,0,0" Text="{Binding Subject}" TextWrapping="Wrap"/>
-                      </StackPanel>
+              <Button Classes="icon_button" Width="22" Height="22" Cursor="Hand" Click="OnOpenContainsIn" IsVisible="{Binding #ThisControl.SupportsContainsIn}" ToolTip.Tip="{DynamicResource Text.CommitDetail.Info.ContainsIn}">
+                <Path Width="12" Height="12" Margin="0,1,0,0" Data="{StaticResource Icons.Milestone}"/>
+              </Button>
+
+              <Button Classes="icon_button" Width="22" Height="22" Cursor="Hand" Click="OnOpenWebLink" IsVisible="{Binding #ThisControl.WebLinks, Converter={x:Static c:ListConverters.IsNotNullOrEmpty}}" ToolTip.Tip="{DynamicResource Text.CommitDetail.Info.WebLinks}">
+                <Path Width="11" Height="11" Data="{StaticResource Icons.Link}" Fill="{DynamicResource Brush.Link}"/>
+              </Button>
+
+              <ContentControl Content="{Binding #ThisControl.SignInfo}">
+                <ContentControl.DataTemplates>
+                  <DataTemplate DataType="m:CommitSignInfo">
+                    <Border Width="22" Height="22" Background="Transparent">
+                      <ToolTip.Tip>
+                        <StackPanel Orientation="Vertical">
+                          <TextBlock Margin="0,0,0,12" Text="{Binding ToolTip}"/>
+                          <Grid ColumnDefinitions="Auto,8,Auto" RowDefinitions="Auto,Auto">
+                            <TextBlock Grid.Row="0" Grid.Column="0" Text="{DynamicResource Text.CommitDetail.Info.Signer}" IsVisible="{Binding HasSigner}" VerticalAlignment="Center"/>
+                            <TextBlock Grid.Row="0" Grid.Column="2" Text="{Binding Signer}" IsVisible="{Binding HasSigner}" VerticalAlignment="Center"/>
+                            <TextBlock Grid.Row="1" Grid.Column="0" Text="{DynamicResource Text.CommitDetail.Info.Key}" VerticalAlignment="Center"/>
+                            <TextBlock Grid.Row="1" Grid.Column="2" Text="{Binding Key}" VerticalAlignment="Center"/>
+                          </Grid>
+                        </StackPanel>
+                      </ToolTip.Tip>
+                      <Path Width="12" Height="12" Data="{StaticResource Icons.Verified}" Fill="{Binding Brush}"/>
+                    </Border>
+                  </DataTemplate>
+                </ContentControl.DataTemplates>
+              </ContentControl>
+            </StackPanel>
+
+            <!-- Row 1: Parents & Refs -->
+            <WrapPanel Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Margin="0,4,0,0" Orientation="Horizontal">
+              <!-- PARENTS -->
+              <StackPanel Orientation="Horizontal" Spacing="4" Margin="0,0,12,0" IsVisible="{Binding Parents, Converter={x:Static c:ListConverters.IsNotNullOrEmpty}}">
+                <TextBlock Text="{DynamicResource Text.CommitDetail.Info.Parents}" FontSize="11" Foreground="{DynamicResource Brush.FG2}" VerticalAlignment="Center"/>
+                <ItemsControl ItemsSource="{Binding Parents}">
+                  <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                      <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Spacing="6"/>
+                    </ItemsPanelTemplate>
+                  </ItemsControl.ItemsPanel>
+
+                  <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                      <TextBlock Text="{Binding Converter={x:Static c:StringConverters.ToShortSHA}}"
+                                 FontFamily="{DynamicResource Fonts.Monospace}"
+                                 FontSize="11"
+                                 Foreground="DarkOrange"
+                                 TextDecorations="Underline"
+                                 Cursor="Hand"
+                                 Margin="0,0,8,0"
+                                 PointerEntered="OnSHAPointerEntered"
+                                 PointerPressed="OnSHAPressed"
+                                 ContextRequested="OnSHAContextRequested"
+                                 ToolTip.ShowDelay="0">
+                        <ToolTip.IsOpen>
+                          <MultiBinding Converter="{x:Static BoolConverters.And}">
+                            <Binding Path="$self.IsPointerOver"/>
+                            <Binding Path="$self.(ToolTip.Tip)" Converter="{x:Static ObjectConverters.IsNotNull}"/>
+                          </MultiBinding>
+                        </ToolTip.IsOpen>
+
+                        <TextBlock.DataTemplates>
+                          <DataTemplate DataType="m:Commit">
+                            <StackPanel MinWidth="400" Orientation="Vertical">
+                              <Grid ColumnDefinitions="Auto,*,Auto">
+                                <v:Avatar Grid.Column="0" Width="16" Height="16" VerticalAlignment="Center" IsHitTestVisible="False" User="{Binding Author}"/>
+                                <TextBlock Grid.Column="1" Text="{Binding Author.Name}" Margin="8,0,0,0"/>
+                                <v:DateTimePresenter Grid.Column="2"
+                                                     Margin="8,0,0,0"
+                                                     Timestamp="{Binding CommitterTime}"
+                                                     Foreground="{DynamicResource Brush.FG2}"/>
+                              </Grid>
+
+                              <TextBlock Margin="0,8,0,0" Text="{Binding Subject}" TextWrapping="Wrap"/>
+                            </StackPanel>
+                          </DataTemplate>
+                        </TextBlock.DataTemplates>
+                      </TextBlock>
                     </DataTemplate>
-                  </TextBlock.DataTemplates>
-                </TextBlock>
-              </DataTemplate>
-            </ItemsControl.ItemTemplate>
-          </ItemsControl>
+                  </ItemsControl.ItemTemplate>
+                </ItemsControl>
+              </StackPanel>
 
-          <!-- REFS -->
-          <TextBlock Grid.Row="2" Grid.Column="0" Classes="info_label" VerticalAlignment="Top" Margin="0,4,0,0" Text="{DynamicResource Text.CommitDetail.Info.Refs}" IsVisible="{Binding HasDecorators}"/>
-          <Border Grid.Row="2" Grid.Column="1" Margin="12,0,0,0" MinHeight="24" IsVisible="{Binding HasDecorators}">
-            <v:CommitRefsPresenter Foreground="{DynamicResource Brush.FG1}"
-                                   FontSize="12"
-                                   AllowWrap="True"
-                                   Margin="0,4,0,0"
-                                   UseGraphColor="False"
-                                   PointerReleased="OnCommitRefsPresenterPointerReleased"/>
-          </Border>
+              <!-- REFS -->
+              <v:CommitRefsPresenter Foreground="{DynamicResource Brush.FG1}"
+                                     FontSize="11"
+                                     AllowWrap="True"
+                                     UseGraphColor="False"
+                                     IsVisible="{Binding HasDecorators}"
+                                     PointerReleased="OnCommitRefsPresenterPointerReleased"/>
+            </WrapPanel>
+          </Grid>
+        </Border>
 
-          <!-- Messages -->
-          <TextBlock Grid.Row="3" Grid.Column="0" Classes="info_label" VerticalAlignment="Top" Margin="0,4,0,0" Text="{DynamicResource Text.CommitDetail.Info.Message}" />
-          <v:CommitMessagePresenter Grid.Row="3" Grid.Column="1"
-                                    Margin="12,4,0,0"
-                                    FontSize="{Binding Source={x:Static vm:Preferences.Instance}, Path=DefaultFontSize}"
+        <!-- Messages (Full natural width, no 96px blank column) -->
+        <Border Margin="12,4,12,6">
+          <v:CommitMessagePresenter FontSize="{Binding Source={x:Static vm:Preferences.Instance}, Path=DefaultFontSize}"
                                     Foreground="{DynamicResource Brush.FG1}"
                                     FullMessage="{Binding #ThisControl.FullMessage}"
                                     HorizontalAlignment="Stretch"
@@ -210,7 +221,7 @@
               </DataTemplate>
             </v:CommitMessagePresenter.DataTemplates>
           </v:CommitMessagePresenter>
-        </Grid>
+        </Border>
       </StackPanel>
     </DataTemplate>
   </UserControl.DataTemplates>

@@ -401,9 +401,6 @@ namespace SourceGit.Views
         protected override void OnSizeChanged(SizeChangedEventArgs e)
         {
             base.OnSizeChanged(e);
-
-            if (Bounds.Height >= 23.0)
-                BranchesPresenter.Height = Bounds.Height;
         }
 
         protected override void OnPropertyChanged(AvaloniaPropertyChangedEventArgs change)
