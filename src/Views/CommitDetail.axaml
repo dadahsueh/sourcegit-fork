@@ -26,7 +26,7 @@
         <StackPanel Orientation="Vertical">
           <!-- Base Information -->
           <v:CommitBaseInfo Content="{Binding Commit}"
-                            FullMessage="{Binding FullMessage}"
+                            Message="{Binding MessageMarkdown}"
                             SignInfo="{Binding SignInfo}"
                             WebLinks="{Binding WebLinks}"
                             Margin="0,0,12,0"/>

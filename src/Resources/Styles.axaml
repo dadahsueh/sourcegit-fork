@@ -529,6 +529,18 @@
     <Setter Property="TextDecorations" Value="Strikethrough"/>
   </Style>
 
+  <Style Selector="TextBlock.monospace">
+    <Setter Property="FontFamily" Value="{DynamicResource Fonts.Monospace}"/>
+  </Style>
+  <Style Selector="TextBlock.link">
+    <Setter Property="Foreground" Value="{DynamicResource Brush.Link}"/>
+  </Style>
+  <Style Selector="TextBlock.commit_link">
+    <Setter Property="FontFamily" Value="{DynamicResource Fonts.Monospace}"/>
+    <Setter Property="Foreground" Value="DarkOrange"/>
+    <Setter Property="TextDecorations" Value="Underline"/>
+  </Style>
+
   <Style Selector="Run.issue_link">
     <Setter Property="Foreground" Value="{DynamicResource Brush.Link}"/>
   </Style>
